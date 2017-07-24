@@ -29,7 +29,7 @@ Browser Architecture team will document its output like this:
 
 It is possible that GDocs has such a low update friction that people will resent the PR process imposed by Github. If this turns out to be true then we will need to update this process.
 
-This process is somewhat modelled on the [Rust RTFC](https://github.com/rust-lang/rfcs) process. It isn't certain that we need the numeric prefix.
+This process is somewhat modelled on the [Rust RFC](https://github.com/rust-lang/rfcs) process. It isn't certain that we need the numeric prefix.
 
 
 # Alternatives
