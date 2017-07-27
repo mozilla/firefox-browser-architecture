@@ -11,3 +11,11 @@ Our top priority is to plan for where we want to go, but if we just think 5 year
 
 1. Look forward from where we are now: Move faster
 2. Look backwards from where we want to get to: Consciously plan our architecture
+
+## Our Conclusions
+
+* [Documenting our output](text/0001-documenting-output.md) looks at how we’re going to communicate with the rest of Mozilla.
+
+## Posts
+
+* [Browser Architecture Update](posts/2017-07-27-browser-architecture-update.md) is the first of our newsletters, sent to firefox-dev to keep everyone in the loop.
