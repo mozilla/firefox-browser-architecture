@@ -18,4 +18,4 @@ Our top priority is to plan for where we want to go, but if we just think 5 year
 
 ## Posts
 
-* [Browser Architecture Update](posts/2017-07-27-browser-architecture-update.md) is the first of our newsletters, sent to [firefox-dev](https://mail.mozilla.org/pipermail/firefox-dev/) to keep everyone in the loop.
+* [Browser Architecture Update](posts/2017-07-27-browser-architecture-update.md) is the first of our newsletters, sent to [firefox-dev](https://www.mozilla.org/en-US/about/forums/#firefox-dev) to keep everyone in the loop.

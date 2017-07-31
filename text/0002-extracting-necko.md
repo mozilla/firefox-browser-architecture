@@ -4,7 +4,7 @@ Can we break out a Gecko component, such as Necko, for reuse in background servi
 
 ## Motivation
 
-If — as we expect — Mozilla will need to build consistent native applications across platforms, and background services on desktop, it would be beneficial in theory to leverage our existing investment in our network layer, avoiding the confusing situation of having two ways to configure network settings, and avoiding the possibility of different behaviors in different parts of an application.
+We expect that Mozilla will need to build consistent native applications and background services across platforms, including services and applications that don't run Gecko atop a profile directory. To do this it would be beneficial (in theory) to leverage our existing investment in our network layer, avoiding the confusing situation of having multiple ways to configure network settings, and avoiding the possibility of different behaviors in different parts of an application.
 
 Furthermore, we expect the question of reuse to recur. Necko is sometimes characterized as being a relatively self-contained piece of mozilla-central's compiled code, so it should be one of the easiest to reuse. Also, its interdependencies are probably applicable to other components, so it's a good opportunity to learn.
 
@@ -12,11 +12,10 @@ Breaking out a component for reuse is, for our purposes, equivalent to embedding
 
 # References
 
-Lots of very old documents:
-
-* <https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Necko/Embedding_Necko>
-* <https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Necko>
-* <https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Necko/Architecture> 
+* Lots of very old documents:
+  * <https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Necko/Embedding_Necko>
+  * <https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Necko>
+  * <https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Necko/Architecture> 
 * Discussions with rhelmer and jduell
 * Examination of `/netwerk`
 
@@ -39,17 +38,25 @@ Lots of very old documents:
 
 Necko is a very feature-rich C++ networking library that is directly targeted at meeting the needs of single-user, single-main-process, single-profile, interactive applications built on a persistent profile directory in the traditional Mozilla model. It is not well-suited for use outside of the Gecko lifecycle — indeed, almost every aspect is designed for the Gecko world — and would require substantial effort in decoupling to be suited for embedded use. Even if so decoupled, it would still mandate the use of XPCOM and the NSPR.
 
-To extract Necko for reuse outside of Gecko, by non-XPCOM-based applications, would — almost by definition — require coming up with a plan to deal with XPCOM. Given that Necko's data structures, interface definitions, macros, etc. *are* XPCOM's, it seems infeasible to eliminate XPCOM dependency from the module without a total rewrite.
+To extract Necko for reuse outside of Gecko, by non-XPCOM-based applications, would — almost by definition — require coming up with a plan to deal with XPCOM. That plan might look a lot like continuing historical efforts on deCOMtamination.
+
+Necko's data structures, interface definitions, error codes, macros, etc. *are* XPCOM's, and so eliminating XPCOM dependency from the module is likely to involve touching almost every line of code. [Automated tools to do so have been proposed](https://brendaneich.com/2006/10/mozilla-2/).
+
+(Going further to eliminate NSPR and mfbt data structures, yielding a more standard C++ library, would be further work still.)
 
 This is particularly relevant when we consider oxidation — the replacement of C++ and JS components of Firefox with Rust — and even more so when we consider the use of such components both outside and inside Firefox *from* Rust (rather than from existing non-Rust callers).
 
-Our position is that extracting Necko from Gecko for reuse would be a significant amount of work, and doing so in a way that allows its use from ordinary Rust consumers, without shipping XPCOM/NSPR/*etc*., would be even more so.
+There is ongoing work on landing Rust components in Firefox; most obstacles there are around XPCOM integration for Rust code, which currently requires writing lots of routine boilerplate by hand.
 
-Our proposal, then, is that we should not attempt to reuse Necko outside of Gecko.
+There is also some initial scoping of work to extract and use Gecko C++ components from Servo, which is a similar problem to using Gecko C++ components from Rust background services or mobile applications. Those estimates are large (but not yet published), on the order of 3-5 engineer years for non-trivial components.
 
-Standalone Rust components should use Rust networking libraries of equivalent functionality, *e.g.*, Tokio/Hyper (already vendored for Servo) or libpnet. Useful Necko functionality should be ported to Rust as needed.
+Extracting such a module is not routine work: delicate balances need to be found between maintaining useful integration with Gecko (*e.g.*, Necko's `nsIChannel` permeates the codebase) versus designing for embedding, and between reimplementing Gecko dependencies in Rust for reuse versus reworking the component to avoid them.
 
-One possible subsequent definition of "oxidation" is to replace the implementation of Necko within Firefox with an XPCOM wrapper around the independent Rust code.
+Our position is that extracting Necko from Gecko for reuse would be a significant amount of work. Doing so in a way that allows its use from ordinary Rust consumers, without shipping XPCOM/NSPR/*etc*., would be even more so.
+
+That amount of work is certainly much more than simply using the existing well-tested and idiomatic networking libraries available to Rust code. Given that the benefits of using Necko in its entirety (instead of *e.g.*, just using Hyper for HTTP) are relatively small, our proposal is that we **should not attempt to reuse Necko outside of Gecko**.
+
+Standalone Rust components should use Rust networking libraries of equivalent functionality, *e.g.*, Tokio/Hyper (already vendored for Servo) or libpnet. Useful Necko functionality should be ported to Rust as needed. Those Rust reimplementations can be imported back into Necko like any other piece of oxidized code.
 
 # Alternatives
 
@@ -64,4 +71,4 @@ This document was originally drafted in the ["Answered questions" Google Doc](ht
 
 # Colophon
 
-This document was written by Richard Newman (rnewman), reviewed by Jason Duell (jduell), Rob Helmer (rhelmer), and Joe Walker.
+This document was written by Richard Newman (rnewman), reviewed by Jason Duell (jduell), Rob Helmer (rhelmer), Joe Walker, and Myk Melez.
