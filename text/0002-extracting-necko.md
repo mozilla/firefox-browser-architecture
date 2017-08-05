@@ -54,7 +54,7 @@ Extracting such a module is not routine work: delicate balances need to be found
 
 Our position is that extracting Necko from Gecko for reuse would be a significant amount of work. Doing so in a way that allows its use from ordinary Rust consumers, without shipping XPCOM/NSPR/*etc*., would be even more so.
 
-That amount of work is certainly much more than simply using the existing well-tested and idiomatic networking libraries available to Rust code. Given that the benefits of using Necko in its entirety (instead of *e.g.*, just using Hyper for HTTP) are relatively small, our proposal is that we **should not attempt to reuse Necko outside of Gecko**.
+That amount of work is certainly much more than simply using the existing well-tested and idiomatic networking libraries available to Rust code. Given that the benefits of using Necko in its entirety (instead of *e.g.*, just using Hyper for HTTP) are relatively small, our conclusion is that we **should not attempt to reuse Necko outside of Gecko**.
 
 Standalone Rust components should use Rust networking libraries of equivalent functionality, *e.g.*, Tokio/Hyper (already vendored for Servo) or libpnet. Useful Necko functionality should be ported to Rust as needed. Those Rust reimplementations can be imported back into Necko like any other piece of oxidized code.
 
