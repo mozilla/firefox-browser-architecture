@@ -34,9 +34,7 @@ helpers: {
   "focus|capturing": () => { /* copy in xbl implementation */ }
 }
 ```
-7. `[inherits]`: This is a way to declaratively copy attributes from a binding parent to content and keep them in sync, similar to the `<observes>` element. For example, this copies the feedURL from the parent into the 'value' field of the label, and also observes future changes
-`<feed feedURL="http://foo.com">
-<xul:label xbl:inherits="value=feedURL,tooltiptext=feedURL">`
+7. `[inherits]`: Is a way to declaratively copy attributes from a binding parent to content and keep them in sync, similar to the `<observes>` element. For example, this copies the feedURL from the parent into the 'value' field of the label and also observes future changes: `<feed feedURL="http://foo.com"><xul:label xbl:inherits="value=feedURL,tooltiptext=feedURL"></feed>`. The same thing could be built on top of Custom Elements using a MutationObserver and some glue code to set it up in the `connectedCallback`.
 8. Scoped CSS Styling: this can be done with Shadow DOM
 9. Insertion Points: XBL and Shadow DOM appear to use similar models but different keywords. Further investigation is needed.
 
