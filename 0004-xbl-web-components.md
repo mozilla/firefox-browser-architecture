@@ -70,7 +70,6 @@ The first step is getting some measurements to compare things like element creat
 
 ## Notes
 
-* Custom Elements don't currently work in XUL documents, nor are there plans to support them.
 * Custom Elements don't currently work in XHTML documents, but are specified to.
 * Custom Elements don't currently work in XUL documents and additional work is required to support them. In particular:
   * Elements can be created from the XUL prototype cache, bypassing the XML parser
