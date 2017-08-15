@@ -39,7 +39,6 @@ helpers: {
 <xul:label xbl:inherits="value=feedURL,tooltiptext=feedURL">`
 8. Scoped CSS Styling: this can be done with Shadow DOM
 9. Insertion Points: XBL and Shadow DOM appear to use similar models but different keywords. Further investigation is needed.
-10. `[role]`: Used for accessibility: `role="xul:toolbar"`
 
 ### XBL features that don't map Web Components features
 
@@ -54,9 +53,14 @@ helpers: {
 
 ## XBL Usage in Firefox
 
-How many times are individual bindings used?  We've written a module to track how often XBL (and XUL) are used, and a modified version of the test runner that [keeps a count throughout the mochitest-browser suite](https://bugzilla.mozilla.org/show_bug.cgi?id=1376546). Here are initial results:
+How many times are individual bindings used?  We've written a module to track how often XBL (and XUL) are used, and a modified version of the test runner that keeps a count throughout the mochitest-browser suite. [A sorted list of used bindings is attached on the bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1376546), but here are the top few bindings:
 
-TODO: ENTER LATEST RESULTS HERE
+    url("chrome://global/content/bindings/text.xml#text-label")
+    url("chrome://global/content/bindings/general.xml#image")
+    url("chrome://global/content/bindings/toolbarbutton.xml#toolbarbutton")
+    url("chrome://global/content/bindings/menu.xml#menuitem")
+    url("chrome://global/content/bindings/scrollbox.xml#autorepeatbutton")
+    url("chrome://global/content/bindings/button.xml#button")
 
 ## Performance Considerations
 
