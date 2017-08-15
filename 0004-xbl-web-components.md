@@ -72,8 +72,10 @@ The first step is getting some measurements to compare things like element creat
 
 * Custom Elements don't currently work in XUL documents, nor are there plans to support them.
 * Custom Elements don't currently work in XHTML documents, but are specified to.
-* Embedding Shadow DOM inside XBL anonymous content is discouraged. If this becomes necessary it would require more analysis.
-* The [Custom Elements polyfill](https://github.com/webcomponents/custom-elements) doesn't work in XUL documents, but should be fixable if we want to prototype swapping out components without switching the top level document away from XUL. If this is a good way to migrate away from XBL, we'd have to do work to make the native Web Components implementation work in XUL documents
+* Custom Elements don't currently work in XUL documents and additional work is required to support them. In particular:
+  * Elements can be created from the XUL prototype cache, bypassing the XML parser
+  * XUL elements are subtly different from HTML elements in how they handle their parenting and prototype chains
+* The [Custom Elements polyfill](https://github.com/webcomponents/custom-elements) doesn't work in XUL documents, but a [fork designed to use deepTreeWalker](https://github.com/webcomponents/custom-elements/compare/master...bgrins:firefox-browser-chrome?expand=1) does. Using this would allow us to prototype swapping out components without switching the top level document away from XUL. If this turns out to be a good way to migrate away from XBL, we'd have to do work to make the native Web Components implementation work in XUL documents.
 * The relevant Web Components implementations are still off by default and missing features in Firefox:
   * Custom Elements is in progress, with plans to complete the work by end Q3 2017
   * Shadow DOM is backlogged, with plans to start the work in H2 2017.
