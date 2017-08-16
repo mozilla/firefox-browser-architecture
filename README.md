@@ -15,6 +15,8 @@ Our top priority is to plan for where we want to go, but if we just think 5 year
 
 * [Documenting our output](text/0001-documenting-output.md) looks at how we’re going to communicate with the rest of Mozilla.
 * [Extracting Necko](text/0002-extracting-necko.md) considers whether it's feasible or worthwhile to extract Necko — Gecko's C++ networking library — for use as a standalone component.
+* [XUL problems](text/0003-problems-with-xul.md) aims to list the different kinds of problems that exist with XUL.
+* [XBL and Web Components](text/0004-xbl-web-components.md) compares some old Mozilla technology (XBL) with modern Web Components.
 
 ## Posts
 
