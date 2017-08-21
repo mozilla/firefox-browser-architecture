@@ -37,7 +37,7 @@ The Review Packet includes:
   * The chair
   * (For Design Reviews) other senior engineers who will provide valuable input.
 
-The review process should address the question(s) where possible, but the meeting may also decide to alter the the question(s) and undergo a subsequent review. For questions that are go/no-go in nature the decision does not need to be taken during the meeting, although we should be very open about conversations that happen after the review meeting.
+The review meeting should be a discussion of the issues, but should avoid feeling pressured to make a decision, the goal is to understand the issues raised by the question(s) and the background from the review packet, and to add to it wisdom from the people at the review. The meeting may decide to alter the questions and undergo a subsequent review. For questions that are go/no-go in nature the decision does not need to be taken during the meeting, although we should be very open about conversations that happen after the review meeting.
 
 The ideal review process scales well. The same basic system should work for a quick 2 person decision over the best way to design a certain feature, and for a critical organization wide decision about a path to take. The term “team” is used above although we strongly recommend design reviews for smaller questions. If you feel yourself wondering if some design is best, it should be easy to valuable to perform a review.
 
