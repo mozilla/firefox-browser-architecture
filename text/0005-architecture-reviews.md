@@ -39,7 +39,7 @@ The Review Packet includes:
 
 The review process should address the question(s) where possible, but the meeting may also decide to alter the the question(s) and undergo a subsequent review. For questions that are go/no-go in nature the decision does not need to be taken during the meeting, although we should be very open about conversations that happen after the review meeting.
 
-The ideal review process scales well. Ideally the same basic system should work for a quick 2 person decision over the best way to design a certain feature, and for a critical organization wide decision about a path to take. The term “team” is used above although we strongly recommend design reviews for smaller questions. If you feel yourself wondering if some design is best, it should be easy to valuable to perform a review.
+The ideal review process scales well. The same basic system should work for a quick 2 person decision over the best way to design a certain feature, and for a critical organization wide decision about a path to take. The term “team” is used above although we strongly recommend design reviews for smaller questions. If you feel yourself wondering if some design is best, it should be easy to valuable to perform a review.
 
 ## Rationale
 
@@ -76,7 +76,7 @@ A Design Review should focus on:
 
 The key outcome is middle management and individual engineers understanding the value proposition and the path to success.
 
-In [RACI](https://en.wikipedia.org/wiki/Responsibility_assignment_matrix) terms. The team is Responsible, the chair is accountable, other senior engineers or managers are Consulted and various others in the organization are Informed.
+In [RACI](https://en.wikipedia.org/wiki/Responsibility_assignment_matrix) terms. The team is Responsible, the chair is Accountable, other senior engineers or managers are Consulted and various others in the organization are Informed.
 
 ### Structure and inputs
 
@@ -96,7 +96,7 @@ The goal is to have the chair (representing the responsible decision makers) and
 
 The chair then evaluates and refines the team’s document with the assistance of domain experts and the identified stakeholders. Hopefully the consulted stakeholders concur with the framing of the problem and are aligned behind the architectural approach, but perhaps they are not. The chair collects such concerns and presents them. This should be a collaborative process whereby the architectural review functions to document a problem and a proposed solution, in which case the chair can solicit response from the team.
 
-Hopefully, involving the team and the chair informally and subsequently sharing ownership of a document will seed a collaborative process. A particular benefit is avoiding drift between the proposal and the focus of the review: that is, a "successful review" that results in a “go” or “no go” from responsible decision makers in which the review doesn't actually evaluate what the team proposes.
+Involving the team and the chair informally and subsequently sharing ownership of a document is designed to seed a collaborative process. A particular benefit is avoiding drift between the proposal and the focus of the review: that is, a "successful review" that results in a “go” or “no go” from responsible decision makers in which the review doesn't actually evaluate what the team proposes.
 
 ### What to review and what to say after review
 
