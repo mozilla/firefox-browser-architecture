@@ -16,9 +16,9 @@ For both a Roadmap Review and a Design Review the **timetable** is as follows:
 
 1. Lay the stage. The team should document (See "initial meeting" below):
   * Someone to **chair** the review
-    - For a Roadmap Review this will be the *least* senior person in the management chain with the ability to provide resources to the problem.
-    - For a Design Review this will be the *most* experienced engineer outside of the team willing to put time into the problem. As engineers don’t review their own code they shouldn’t review their own designs.
-  * The **question** (or questions) to be resolved, which should be agreed between the team asking for review and the chair. For a Roadmap Review this is likely to be in the form of a Go/No-Go decision. For a Design Review this is likely to be a more open question (e.g. "How should this design be improved")
+    - For a Roadmap Review this will be the *least* senior manager with the ability to address the problem in it's entireity.
+    - For a Design Review this will be the an experienced engineer in the problem domain outside of the team willing to put time into the problem. As engineers don’t review their own code they shouldn’t review their own designs.
+  * The **question** (or questions) to be resolved, which should be agreed between the team asking for review and the chair.
 
 2. The team produces a **Review Packet** designed to answer the question identified in step 1. The production of the Review Packet is expected to be collaborative and iterative to ensure that the review focuses on the key questions and the team presents its best case. This is particularly true of a Roadmap Review where the consequences of the answer are likely to be more significant.
 The Review Packet includes:
@@ -39,7 +39,7 @@ The Review Packet includes:
   * The chair
   * (For Design Reviews) other senior engineers who will provide valuable input.
 
-The review meeting should be a discussion of the issues, but should avoid feeling pressured to make a decision. The goal is to understand the issues raised by the question(s) and the background from the review packet, and to add to it wisdom from the people at the review. The meeting may decide to alter the questions and undergo a subsequent review. For questions that are go/no-go in nature the decision does not need to be taken during the meeting, although we should be very open about conversations that happen after the review meeting.
+The review meeting should be a discussion of the issues, but should avoid feeling pressured to make a decision. The goal is to understand the issues raised by the question(s) and the background from the review packet, and to add to it wisdom from the people at the review. The meeting may decide to alter the questions and undergo a subsequent review. We should be very open about conversations that happen after the review meeting.
 
 The ideal review process scales well. The same basic system should work for a quick 2 person decision over the best way to design a certain feature, and for a critical organization wide decision about a path to take. The term “team” is used above although we strongly recommend design reviews for smaller questions. If you feel yourself wondering if some design is best, it should be easy to valuable to perform a review.
 
