@@ -1,0 +1,125 @@
+---
+---
+
+@import "{{ site.theme }}";
+@import url('https://fonts.googleapis.com/css?family=Zilla+Slab|Zilla+Slab+Highlight');
+
+// Convert pixel units to rems, assuming a 16px base size
+// Usage: remify(24px)
+@function remify($pixels) {
+  $rems: $pixels / 16px;
+  @return #{$rems}rem;
+}
+
+@mixin font-size($size) {
+  // When unit is pixels, pass it through and convert to rem
+  @if (unit($size) == 'px') {
+      font-size: $size;
+      font-size: remify($size);
+  }
+
+  // When unit is not pixels, show an error
+  @else {
+      @error 'This mixin only accepts sizes in pixels. You declared `font-size(#{$size})`.';
+  }
+}
+
+@mixin font-size-huge { // For especially huge titles
+  @include font-size(50px);
+
+  @media screen and (min-width: 760px) {
+      @include font-size(90px);
+  }
+}
+
+@mixin font-size-level1 {
+  @include font-size(28px);
+
+  @media screen and (min-width: 760px) {
+    @include font-size(50px);
+  }
+}
+
+@mixin font-size-level2 {
+  @include font-size(21px);
+
+  @media screen and (min-width: 760px) {
+    @include font-size(38px);
+  }
+}
+
+@mixin font-size-level3 {
+  @include font-size(18px);
+
+  @media screen and (min-width: 760px) {
+    @include font-size(28px);
+  }
+}
+
+@mixin font-size-level4 {
+  @include font-size(16px);
+
+  @media screen and (min-width: 760px) {
+    @include font-size(21px);
+  }
+}
+
+body {
+  background: #fff;
+  font-size: 20px;
+  font-family: "Zilla Slab", "Open Sans", X-LocaleSpecific, sans-serif;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6, legend {
+  color: #000;
+  font-weight: bold;
+  line-height: 1.1;
+  margin: 0 0 .25em;
+}
+
+h1 {
+  @include font-size-level1;
+}
+
+h2 {
+  @include font-size-level2;
+}
+
+h3 {
+  @include font-size-level3;
+}
+
+h4 {
+  @include font-size-level4;
+}
+
+h5, h6 {
+  @include font-size(16px);
+}
+
+p,
+ul,
+ol,
+dl,
+table {
+  margin-bottom: 1.25em;
+}
+
+a {
+  color: #006688;
+}
+
+a:hover, a:focus, a:active, a:visited:hover, a:visited:focus, a:visited:active {
+  color: #0088aa;
+  font-weight: normal;
+}
+
+a:visited {
+  color: #004455;
+}
+
+.wrapper > section {
+  float: none;
+  width: 100%;
+}
