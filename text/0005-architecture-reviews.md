@@ -53,6 +53,8 @@ For both a Roadmap Review and a Design Review the goal is to hear perspectives t
 * Which **audience** is intended to consume the outputs of the review process?
 * What committee **structure** is best positioned to deliver those outputs?
 * What are the **inputs** that the committee should evaluate?
+* What **process** will most encourage participants to look at review as an asset rather than an obstacle?
+* What kinds of **conduct** are necessary in order for the process to be inclusive and constructive?
 * What size and **maturity** should projects achieve before undergoing review?
 * When should review results be **disseminated**?
 
@@ -100,7 +102,13 @@ The goal is to have the chair (representing the responsible decision makers) and
 
 The chair then evaluates and refines the team’s document with the assistance of domain experts and the identified stakeholders. Hopefully the consulted stakeholders concur with the framing of the problem and are aligned behind the architectural approach, but perhaps they are not. The chair collects such concerns and presents them. This should be a collaborative process whereby the architectural review functions to document a problem and a proposed solution, in which case the chair can solicit response from the team.
 
-Involving the team and the chair informally and subsequently sharing ownership of a document is designed to seed a collaborative process. A particular benefit is avoiding drift between the proposal and the focus of the review: that is, a "successful review" that results in a “go” or “no go” from responsible decision makers in which the review doesn't actually evaluate what the team proposes.
+### Process and Conduct
+
+Involving the team and the chair informally and subsequently sharing ownership of a document is designed to seed a collaborative process. A particular benefit is avoiding drift between the proposal and the focus of the review.
+
+An Architecture Review process can be formally mandated. This may work in environments with a large degree of formallity and process. This isn't how Mozilla works. For an Architecture Review process to be successful at Mozilla it must be beneficial to the team undergoing review.
+
+The primary informal output of a review should be learning. It is exepcted that authoritarian go/no-go decisions will fall out additional learning rather than being imposed in the form of a question.
 
 ### Maturity and Dissemination
 
