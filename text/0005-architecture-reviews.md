@@ -56,7 +56,7 @@ For both a Roadmap Review and a Design Review the goal is to hear perspectives t
 * What size and **maturity** should projects achieve before undergoing review?
 * When should review results be **disseminated**?
 
-### Outputs and audience
+### Outputs and Audience
 
 The first two considerations define the goals of the review process and are two sides of the same coin.
 
@@ -82,7 +82,7 @@ The key outcome is middle management and individual engineers understanding the 
 
 In [RACI](https://en.wikipedia.org/wiki/Responsibility_assignment_matrix) terms, the team is Responsible, the chair is Accountable, other senior engineers or managers are Consulted and various others in the organization are Informed.
 
-### Structure and inputs
+### Structure and Inputs
 
 The second two considerations shape how the review process actually happens.
 
@@ -102,7 +102,7 @@ The chair then evaluates and refines the team’s document with the assistance o
 
 Involving the team and the chair informally and subsequently sharing ownership of a document is designed to seed a collaborative process. A particular benefit is avoiding drift between the proposal and the focus of the review: that is, a "successful review" that results in a “go” or “no go” from responsible decision makers in which the review doesn't actually evaluate what the team proposes.
 
-### What to review and what to say after review
+### Maturity and Dissemination
 
 The final two considerations shape what is reviewed and how the review concludes.
 
