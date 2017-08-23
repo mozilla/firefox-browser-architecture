@@ -16,7 +16,7 @@ For both a Roadmap Review and a Design Review the **timetable** is as follows:
 
 1. Lay the stage. The team should document (See "initial meeting" below):
   * Someone to **chair** the review
-    - For a Roadmap Review this will be the *least* senior manager with the ability to address the problem in it's entireity.
+    - For a Roadmap Review this will be the *least* senior manager with the ability to address the problem in it's entirety.
     - For a Design Review this will be the an experienced engineer in the problem domain outside of the team willing to put time into the problem. As engineers don’t review their own code they shouldn’t review their own designs.
   * The **question** (or questions) to be resolved, which should be agreed between the team asking for review and the chair.
 
