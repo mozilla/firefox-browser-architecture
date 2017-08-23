@@ -37,7 +37,7 @@ The Review Packet includes:
 4. The chair convenes a review meeting. The discussions of this meeting should be carefully minuted. The meeting comprises:
   * The team making the proposal
   * The chair
-  * (For Design Reviews) other senior engineers who will provide valuable input.
+  * Other senior engineers who will provide valuable input.
 
 The review meeting should be a discussion of the issues, but should avoid feeling pressured to make a decision. The goal is to understand the issues raised by the question(s) and the background from the review packet, and to add to it wisdom from the people at the review. The meeting may decide to alter the questions and undergo a subsequent review. We should be very open about conversations that happen after the review meeting.
 
