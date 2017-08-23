@@ -119,21 +119,37 @@ After the review, the chair and responsible decision makers should provide concr
 
 ## Additional Reading
 
-Multiple Perspectives On Technical Problems and Solutions - John Allspaw - 2017
+### Multiple Perspectives On Technical Problems and Solutions - John Allspaw - 2017
+
+Describes how Etsy's architecture review process evolved. A solid write-up of the social side of an Architecture Review process in an envronment that is likely closer to Mozilla's than many of the other write-ups.
+
+> Fundamental: engineering decision-making is a socially constructed activity
+
+> We called these “something new” things departures. ... the basic idea is that there are costs ... for making departures that attempt to solve a local problem without thinking about the global effects it can have on an organization.
 
 * https://www.kitchensoap.com/2017/08/12/multiple-perspectives-on-technical-problems-and-solutions/
 
-Architecture Reviews - Grady Booch - 2010:
+### Architecture Reviews - Grady Booch - 2010:
+
+A formal write-up from someone who spends a significant time in Architecture Reviews. I've not found the paper online, but the MP3 is an audio version of the paper (with bonus guitar-riff intro). This IBM process suffers from lack of attention to the social aspects, but is helpful in digging into the mechanics of the review itself.
 
 * https://www.researchgate.net/publication/224132839_Architecture_Reviews
 * http://media.computer.org/sponsored/podcast/onarchitecture/onarch-025-v.mp3
 
-A Toolbox of Software Architecture Review Techniques - Jason Baragry - 2014, 2015
+### A Toolbox of Software Architecture Review Techniques - Jason Baragry - 2014, 2015
+
+Jason Baragry reviews approaches to architecture review and notes some potential pitfalls.
+
+> Architecturally significant requirements are often hard to identify, the architecturally significant decisions are often not documented, and the way the decisions interrelate is often not easily understood. A significant part of the review process is often teasing these out.
 
 * https://swarchitectonics.blogspot.co.uk/2014/12/a-toolbox-of-software-architecture.html
 * https://swarchitectonics.blogspot.co.uk/2015/02/a-toolbox-pt2.html
 * https://swarchitectonics.blogspot.co.uk/2015/09/a-toolbox-pt3.html
 
-Software Architecture Review and Assessment (SARA) Report - Kruchten et al. - 2002
+### Software Architecture Review and Assessment (SARA) Report - Kruchten et al. - 2002
+
+Formal process with input from a number of companies which targets a more enterprise environment than exists at Mozilla, however the process is clearly defined.
+
+> A software architecture is a set of concepts and design decisions about structure and texture of software that must be made prior to concurrent engineering (i.e., implementation) to enable effective satisfaction of architecturally significant, explicit functional and quality requirements, along with implicit requirements of the problem and the solution domains
 
 * https://pkruchten.files.wordpress.com/2011/09/sarav1.pdf
