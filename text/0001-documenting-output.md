@@ -20,7 +20,7 @@ Browser Architecture team will document its output like this:
 
 1. The discussion phase involves conversations in the browser-arch [Google Group](https://groups.google.com/a/mozilla.com/forum/#!forum/browser-arch), [IRC channel](https://www.irccloud.com/#!/ircs://irc.mozilla.org:6697/%23browser-arch), [Slack channel](https://mozilla.slack.com/messages/C5F80LV0C/), etc - when a semi-permanent record of current thinking is needed, we use GDocs, stored in [the Browser Architecture folder](https://drive.google.com/drive/u/1/folders/0BzQINYlY78CtbGVqVDVlZlNJX0k).
 2. When we've come to some internal consensus (note this doesn't mean that the proposal is final) we convert our GDocs to Markdown/Git to create an 'RFC' and get feedback from management and the wider Mozilla developer community as appropriate.
-  * Use [this template](../0000-template.md)
+  * Use [this template](https://github.com/mozilla/firefox-browser-architecture/blob/master/text/0000-template.md)
 3. As there are updates we keep the Markdown up to date
 4. We may publish to a wider audience using a blog post or GitBook as required
 
