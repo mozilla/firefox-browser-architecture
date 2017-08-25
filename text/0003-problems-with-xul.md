@@ -12,8 +12,8 @@ XUL code they are few and mostly dedicated to other projects at present.
 
 XUL contains bugs. This isn’t due to anything particularly special about XUL but
 when we encounter bugs we frequently choose to not fix them, instead trying to
-find workarounds in the UI instead. See for example
-https://bugzilla.mozilla.org/show_bug.cgi?id=354527.
+find workarounds in the UI instead. See [bug 354527](https://bugzilla.mozilla.org/show_bug.cgi?id=354527)
+for example.
 
 ## No new features
 
