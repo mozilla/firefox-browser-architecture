@@ -1,6 +1,6 @@
-# Problem
+# Proposal
 
-Can we break out a Gecko component, such as Necko, for reuse in background services and on mobile platforms?
+We should extract Necko for reuse in background services and on mobile platforms.
 
 ## Motivation
 
@@ -34,7 +34,7 @@ Breaking out a component for reuse is, for our purposes, equivalent to embedding
 * Parts of Necko are still single-threaded, requiring new channels to be created on the main thread, and dispatching callbacks to the main thread.
 * Necko's init and deinit are managed by observer notifications, which is not ideal for embedding outside of Gecko.
 
-# Proposal
+# Conclusion
 
 Necko is a very feature-rich C++ networking library that is directly targeted at meeting the needs of single-user, single-main-process, single-profile, interactive applications built on a persistent profile directory in the traditional Mozilla model. It is not well-suited for use outside of the Gecko lifecycle — indeed, almost every aspect is designed for the Gecko world — and would require substantial effort in decoupling to be suited for embedded use. Even if so decoupled, it would still mandate the use of XPCOM and the NSPR.
 
