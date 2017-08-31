@@ -8,10 +8,12 @@ Build the world’s best web browser
 
 Our top priority is to plan for where we want to go, but if we just think 5 years out, we’ll miss the dragon on the doorstep. So we need to look from both angles:
 
-1. Look forward from where we are now: Move faster
-2. Look backwards from where we want to get to: Consciously plan our architecture
+1. Look forward from where we are now: **Move faster**
+2. Look backwards from where we want to get to: **Consciously plan our architecture**
 
 ## Our Conclusions
+
+This is a list of our findings that we're reasonably happy with so far.
 
 * [Documenting our output](text/0001-documenting-output.md) looks at how we’re going to communicate with the rest of Mozilla.
 * [Extracting Necko](text/0002-extracting-necko.md) considers whether it's feasible or worthwhile to extract Necko — Gecko's C++ networking library — for use as a standalone component.
@@ -20,4 +22,7 @@ Our top priority is to plan for where we want to go, but if we just think 5 year
 
 ## Posts
 
-* [Browser Architecture Update](posts/2017-07-27-browser-architecture-update.md) is the first of our newsletters, sent to [firefox-dev](https://www.mozilla.org/en-US/about/forums/#firefox-dev) to keep everyone in the loop.
+We typically send our newsletters to [firefox-dev](https://www.mozilla.org/en-US/about/forums/#firefox-dev).
+
+* [Browser Architecture Update](posts/2017-07-27-browser-architecture-update.md) is the first of our newsletters introducing our work. [[mailing-list-post](https://groups.google.com/forum/#!msg/firefox-dev/ueRILL2ppac/RxR9lLPkAwAJ)]
+* [Browser Architecture Newsletter #2](posts/2017-07-27-browser-architecture-update.md) is a follow-up with updates on XBL Conversion, Storage and Sync and Workflow Improvments [[mailing-list-post](https://groups.google.com/forum/#!topic/firefox-dev/Rc2w2a9e8HQ)]
