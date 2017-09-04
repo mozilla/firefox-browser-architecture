@@ -1,3 +1,4 @@
+
 # Firefox Browser Architecture
 
 ## Vision
@@ -25,4 +26,4 @@ This is a list of our findings that we're reasonably happy with so far.
 We typically send our newsletters to [firefox-dev](https://www.mozilla.org/en-US/about/forums/#firefox-dev).
 
 * [Browser Architecture Update](posts/2017-07-27-browser-architecture-update.md) is the first of our newsletters introducing our work. [[mailing-list-post](https://groups.google.com/forum/#!msg/firefox-dev/ueRILL2ppac/RxR9lLPkAwAJ)]
-* [Browser Architecture Newsletter #2](posts/2017-07-27-browser-architecture-update.md) is a follow-up with updates on XBL Conversion, Storage and Sync and Workflow Improvments [[mailing-list-post](https://groups.google.com/forum/#!topic/firefox-dev/Rc2w2a9e8HQ)]
+* [Browser Architecture Newsletter #2](posts/2017-08-24-browser-architecture-newsletter-2.md) is a follow-up with updates on XBL Conversion, Storage and Sync and Workflow Improvments [[mailing-list-post](https://groups.google.com/forum/#!topic/firefox-dev/Rc2w2a9e8HQ)]
