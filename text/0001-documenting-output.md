@@ -1,3 +1,7 @@
+---
+title: Documenting our Output
+layout: text
+---
 
 # Documenting our Output
 

@@ -1,3 +1,7 @@
+---
+title: Documentation Template
+layout: text
+---
 
 # Documentation Template
 

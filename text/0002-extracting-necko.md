@@ -1,3 +1,7 @@
+---
+title: Extracting Necko
+layout: text
+---
 
 # Extracting Necko
 

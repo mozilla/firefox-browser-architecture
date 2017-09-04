@@ -1,3 +1,7 @@
+---
+title: Problems with XUL
+layout: text
+---
 
 # Problems with XUL
 

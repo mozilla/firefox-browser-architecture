@@ -1,3 +1,7 @@
+---
+title: Browser Architecture Newsletter 2
+layout: text
+---
 
 # Browser Architecture Newsletter 2
 

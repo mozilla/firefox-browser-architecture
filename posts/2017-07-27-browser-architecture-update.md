@@ -1,3 +1,7 @@
+---
+title: Browser Architecture Update
+layout: text
+---
 
 # Browser Architecture Update
 
