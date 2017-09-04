@@ -1,5 +1,7 @@
 
-# Problem
+# Documenting our Output
+
+## Problem
 
 The Browser Architecture team needs to publish its findings clearly. We would like anyone in Mozilla to be able to:
 
@@ -14,7 +16,7 @@ The solution should:
 * Ensure that documents can be found easily
 
 
-# Proposal
+## Proposal
 
 Browser Architecture team will document its output like this:
 
@@ -25,19 +27,19 @@ Browser Architecture team will document its output like this:
 4. We may publish to a wider audience using a blog post or GitBook as required
 
 
-# Drawbacks / Unresolved Questions
+## Drawbacks / Unresolved Questions
 
 It is possible that GDocs has such a low update friction that people will resent the PR process imposed by Github. If this turns out to be true then we will need to update this process.
 
 This process is somewhat modelled on the [Rust RFC](https://github.com/rust-lang/rfcs) process. It isn't certain that we need the numeric prefix.
 
 
-# Alternatives
+## Alternatives
 
 * Create an index to our documentation using Google Docs, and stay in that world.
 * Use Medium and or RSS to publish output.
 
 
-# Links to discussion
+## Links to discussion
 
 * [Mailing list discussion](https://groups.google.com/a/mozilla.com/forum/#!topic/browser-arch/FOtfYVHbgfo)
