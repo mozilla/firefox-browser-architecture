@@ -1,4 +1,5 @@
-# XUL problems
+
+# Problems with XUL
 
 XUL is often mentioned as a source of problems for developers. This document
 aims to list the different kinds of problems that exist.
