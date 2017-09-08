@@ -14,11 +14,11 @@ A **Design Review** is to decide if the thing should be done in a particular way
 
 For both a Roadmap Review and a Design Review the **timetable** is as follows:
 
-1. Lay the stage. The team should document (See "initial meeting" below):
-  * Someone to **chair** the review
+1. The team should lay the stage (see "initial meeting" below):
+  * Document the **question** (or questions) to be resolved, which should be agreed between the team asking for review and the chair.
+  * Find someone to **chair** the review:
     - For a Roadmap Review this will be the *least* senior manager with the ability to address the problem in its entirety.
-    - For a Design Review this will be the an experienced engineer in the problem domain outside of the team willing to put time into the problem. As engineers don’t review their own code they shouldn’t review their own designs.
-  * The **question** (or questions) to be resolved, which should be agreed between the team asking for review and the chair.
+    - For a Design Review this will be an experienced engineer in the problem domain outside of the team willing to put time into the problem. As engineers don’t review their own code they shouldn’t review their own designs. The principle is to get the most informed and least biased feedback possible.
 
 2. The team produces a **Review Packet** designed to answer the question identified in step 1. The production of the Review Packet is expected to be collaborative and iterative to ensure that the review focuses on the key questions and the team presents its best case. This is particularly true of a Roadmap Review where the consequences of the answer are likely to be more significant.
 The Review Packet includes:
@@ -71,7 +71,7 @@ A Roadmap Review should focus on:
 * Competitive analysis
 * Opportunity cost
 
-The key outcome is senior management investing in the problem space and building consensus around a shared reality.
+The key outcome is firstly, senior management investing in the problem space and building consensus around a shared reality. Secondly, to provide documentation of both the goals and assumptions of the project to aid later evaluation.
 
 A Design Review should focus on:
 
@@ -80,7 +80,7 @@ A Design Review should focus on:
 * Milestones and timelines
 * Resource allocation
 
-The key outcome is middle management and individual engineers understanding the value proposition and the path to success.
+The key outcomes are for middle management to understand the value proposition and the path to success and for engineers to understand the design constraints and the tradeoffs between them (this latter part is important when implementation reality causes a re-think, in which case we want to avoid unnecessary re-work).
 
 In [RACI](https://en.wikipedia.org/wiki/Responsibility_assignment_matrix) terms, the team is Responsible, the chair is Accountable, other senior engineers or managers are Consulted and various others in the organization are Informed.
 
@@ -108,7 +108,7 @@ Involving the team and the chair informally and subsequently sharing ownership o
 
 An Architecture Review process can be formally mandated. This may work in environments with a large degree of formality and process. This isn't how Mozilla works. For an Architecture Review process to be successful at Mozilla it must be beneficial to the team undergoing review.
 
-The primary informal output of a review should be learning. It is expected that authoritarian go/no-go decisions will fall out additional learning rather than being imposed in the form of a question.
+The primary informal output of a review should be learning. It is expected that go/no-go decisions will be the result of additional learning rather than the team seeing a 'no-go' as something that needs fighting. Imposed decisions may be required, but learning is a preferred outcome.
 
 ### Maturity and Dissemination
 
@@ -129,7 +129,7 @@ After the review, the chair and responsible decision makers should provide concr
 
 ### Multiple Perspectives On Technical Problems and Solutions - John Allspaw - 2017
 
-Describes how Etsy's architecture review process evolved. A solid write-up of the social side of an Architecture Review process in an envronment that is likely closer to Mozilla's than many of the other write-ups.
+Describes how Etsy's architecture review process evolved. A solid write-up of the social side of an Architecture Review process in an environment that is likely closer to Mozilla's than many of the other write-ups.
 
 > Fundamental: engineering decision-making is a socially constructed activity
 
