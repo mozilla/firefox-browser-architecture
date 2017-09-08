@@ -79,7 +79,7 @@ void rust_greeting_free(char *);
 
 Let's build our code to make sure it works. In order to do this we have to complete our `Cargo.toml` file. This will tell cargo to create a static library and C dynamic library for our code.
 
-```
+```toml
 [package]
 name = "greetings"
 version = "0.1.1"
@@ -160,7 +160,7 @@ class RustGreetings {
     }
 }
 ```
-This creates a new class that we will use as an interface to call into our Rust library. This will allow us to abstract the nuance away from the main code of the app, incuding conversion from a C String to a Swift String and ensures that we won't forget to call our free function and inadvertantly introduce a memory leak!
+This creates a new class that we will use as an interface to call into our Rust library. This will allow us to abstract the nuance away from the main code of the app, including conversion from a C String to a Swift String and ensures that we won't forget to call our free function and inadvertently introduce a memory leak!
 
 Open `ViewController.swift`. Inside the `viewDidLoad` function add the following code:
 ```swift

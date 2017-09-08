@@ -34,4 +34,4 @@ We typically send our newsletters to [firefox-dev](https://www.mozilla.org/en-US
 
 We occasionally write blog posts too.
 
-* [Deplying an Rust library on iOS](blogs/2017-09-06-rust-on-ios.md). A short tutorial describing how to build and deploy a rust library for use inside an iOS app.
+* [Deploying an Rust library on iOS](blogs/2017-09-06-rust-on-ios.md). A short tutorial describing how to build and deploy a rust library for use inside an iOS app.
