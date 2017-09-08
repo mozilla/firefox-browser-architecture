@@ -62,7 +62,7 @@ For both a Roadmap Review and a Design Review the goal is to hear perspectives t
 
 The first two considerations define the goals of the review process and are two sides of the same coin.
 
-The audience of a Roadmap Review is those "up the chain" of decision makers and the audience of a Design Review is those running “down the chain” of implementers.
+The audience of a Roadmap Review is those "up the chain" of decision makers and the audience of a Design Review is those running “down the chain” of implementors.
 
 A Roadmap Review should focus on:
 
