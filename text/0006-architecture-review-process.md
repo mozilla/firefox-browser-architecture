@@ -3,6 +3,10 @@ title: Architecture Review Process
 layout: text
 ---
 
+**Version**: 0.1
+
+**Warning**: This document is incomplete. We've added it to the repo before it's finished because we would like a couple of trial runs before we say we're happy, and we would like something to refer to during those reviews.
+
 # Architecture Review Process
 
 ## Introduction
