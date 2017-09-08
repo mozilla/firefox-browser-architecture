@@ -1,3 +1,9 @@
+---
+title: Browser Architecture Update
+layout: text
+---
+
+# Browser Architecture Update
 
 [Link to mailing-list archive](https://groups.google.com/d/msg/firefox-dev/ueRILL2ppac/RxR9lLPkAwAJ)
 
@@ -19,7 +25,7 @@ We have a mandate to help build the world’s best web browsers, but how? Our st
 
 So what are the specific problems we are looking at?
 
-# Workflow
+## Workflow
 
 UI development in mozilla-central somewhat mirrors the web development ecosystem, however one way we’ve fallen behind is in unit tests for frontend code. In mozilla-central we usually rely on integration tests rather than unit tests. Integration tests end up being slower and are more likely to fail randomly. In addition they steal focus and don’t allow for integration with code editors, to see test results as you type. We’d like to figure out how to write more unit tests in our codebase.
 
@@ -29,7 +35,7 @@ We’ve also spent some time looking at ways to make developing the Firefox fron
 
 In parallel, we’re also looking at ways that we can improve Gecko development efficiency, especially on build times and debugging (Rust, rr, gdb on Mac).
 
-# XUL and XBL
+## XUL and XBL
 
 Our user interface language has problems. It’s uncared for, so it’s buggy and sometimes we don’t land fixes that we know about. It’s largely undocumented or worse, documented wrongly, so it’s hard to fix. Also it behaves almost like the web, which can lead web developers to think they understand it better than they really do.
 
@@ -41,7 +47,7 @@ Can we remove XUL and XBL piece by piece? We are experimenting with a couple of 
 
 Alternatively, what’s the minimum we could do to just fix and document what we’ve got. Perhaps we should just focus on removing XBL? Maybe the plans above are too much work and we need to invest elsewhere entirely?
 
-# User Data Storage and Sync
+## User Data Storage and Sync
 
 We don’t have a good story for storage of user data. We wouldn’t sit down to design the profile directory and come up with what we have today, and we need a better story to be able to sync more readily to Firefox for Android and iOS and to adapt to unanticipated and evolving product needs.
 
@@ -49,7 +55,7 @@ Recently we've been exploring Project Mentat, which promised some advances in he
 
 So we’re looking at the big picture of storage and sync and how we can share data not just between desktop and mobile, but also to help us develop and test new products in the market.
 
-# A Monolithic Platform
+## A Monolithic Platform
 
 We’re considering what it would look like to turn Gecko inside out so it’s more modular, can be reused in smaller parts and is easier to test, as with Rust crates in Servo. Changing that is hard — really hard — but the potential value is also significant.
 

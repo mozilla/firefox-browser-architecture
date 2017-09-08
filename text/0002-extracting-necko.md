@@ -1,8 +1,15 @@
-# Problem
+---
+title: Extracting Necko
+layout: text
+---
 
-Can we break out a Gecko component, such as Necko, for reuse in background services and on mobile platforms?
+# Extracting Necko
 
-## Motivation
+## Proposal
+
+We should extract Necko for reuse in background services and on mobile platforms.
+
+### Motivation
 
 We expect that Mozilla will need to build consistent native applications and background services across platforms, including services and applications that don't run Gecko atop a profile directory. To do this it would be beneficial (in theory) to leverage our existing investment in our network layer, avoiding the confusing situation of having multiple ways to configure network settings, and avoiding the possibility of different behaviors in different parts of an application.
 
@@ -10,7 +17,7 @@ Furthermore, we expect the question of reuse to recur. Necko is sometimes charac
 
 Breaking out a component for reuse is, for our purposes, equivalent to embedding: it's taking the component and driving it in a different context. Specifically, we are interested in those contexts being (a) Rust, (b) not necessarily desktop. An alternative approach is to build a new Gecko application on top of a slimmed-down libxul. In the case of Necko, that might be something like a cURL clone. This kind of reuse is a known quantity, so we won't discuss it here.
 
-# References
+## References
 
 * Lots of very old documents:
   * <https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Necko/Embedding_Necko>
@@ -19,7 +26,7 @@ Breaking out a component for reuse is, for our purposes, equivalent to embedding
 * Discussions with rhelmer and jduell
 * Examination of `/netwerk`
 
-# Analysis: obstacles to embedding
+## Analysis: obstacles to embedding
 
 * In its early days, 15+ years ago, Necko was intended to be embeddable; in recent years that has not been an aim of the component leads. Meeting the needs of Gecko and Firefox is more important. (The definition of 'embeddable' here still carries the obligations of Gecko-style initialization.)
 * As noted in the "Embedding Necko" document, Necko depends on Gecko features:
@@ -35,6 +42,8 @@ Breaking out a component for reuse is, for our purposes, equivalent to embedding
 * Necko's init and deinit are managed by observer notifications, which is not ideal for embedding outside of Gecko.
 
 # Proposal
+## Proposal
+# Conclusion
 
 Necko is a very feature-rich C++ networking library that is directly targeted at meeting the needs of single-user, single-main-process, single-profile, interactive applications built on a persistent profile directory in the traditional Mozilla model. It is not well-suited for use outside of the Gecko lifecycle — indeed, almost every aspect is designed for the Gecko world — and would require substantial effort in decoupling to be suited for embedded use. Even if so decoupled, it would still mandate the use of XPCOM and the NSPR.
 
@@ -58,17 +67,17 @@ That amount of work is certainly much more than simply using the existing well-t
 
 Standalone Rust components should use Rust networking libraries of equivalent functionality, *e.g.*, Tokio/Hyper (already vendored for Servo) or libpnet. Useful Necko functionality should be ported to Rust as needed. Those Rust reimplementations can be imported back into Necko like any other piece of oxidized code.
 
-# Alternatives
+## Alternatives
 
 Alternatives are, variously:
 
 * Do the work to extract Necko. Some significant benefit would need to be articulated in order for this to be worthwhile.
 * Use Gecko for all network-related background services. We already know that this is not feasible, both for application size reasons (Gecko is large), and for technical lifecycle reasons as articulated above. Furthermore, this argument ends up as "use Gecko for everything everywhere", which is not useful.
 
-# Links
+## Links
 
 This document was originally drafted in the ["Answered questions" Google Doc](https://docs.google.com/document/d/1RIMbe0yJGNywFTf1n5ka35JpLtrkE3lHz8iip6jH_VE/edit#).
 
-# Colophon
+## Colophon
 
 This document was written by Richard Newman (rnewman), reviewed by Jason Duell (jduell), Rob Helmer (rhelmer), Joe Walker, and Myk Melez.

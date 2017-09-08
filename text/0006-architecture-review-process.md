@@ -1,3 +1,8 @@
+---
+title: Architecture Review Process
+layout: text
+---
+
 # Architecture Review Process
 
 ## Introduction

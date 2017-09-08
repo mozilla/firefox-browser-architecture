@@ -1,3 +1,7 @@
+---
+title: XBL and Web Components
+layout: text
+---
 
 # XBL and Web Components
 
