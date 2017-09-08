@@ -1,3 +1,8 @@
+---
+title: Building and Deploying a Rust library on iOS
+layout: text
+---
+
 # Building and Deploying a Rust library on iOS
 
 First, we have to [install Xcode](https://itunes.apple.com/us/app/xcode/id497799835?ls=1&amp;mt=12) and then set up Xcode build tools. If you already have the build tools installed and they are up to date, you can skip this step.
