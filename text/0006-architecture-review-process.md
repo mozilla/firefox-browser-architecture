@@ -33,8 +33,8 @@ For both a Roadmap Review and a Design Review the **timetable** is as follows:
 The Review Packet includes:
   * A lay summary of the problem space and the stakeholders which is focused on defining a shared language and identifying the key forces behind the problem
   * A brief that explains what the team is proposing. This should read more like an encyclopedia entry than a marketing document. The audience is the people in the review; i.e. this should attempt to plug organizational documentation holes. The documentation process should not be more onerous than is required for the review. The brief should identify:
-    - the forces on the system
-    - the essential architecture behind the proposal
+    - the [forces on the system](#forces-on-the-system)
+    - the [essential architecture](#essential-architecture) behind the proposal
     - scenarios that exercise the relevant forces against the proposed architecture
     - how the proposal handles these scenarios
   * A competitive analysis suggesting alternatives, costs, and opportunities
@@ -170,3 +170,17 @@ Formal process with input from a number of companies which targets a more enterp
 > A software architecture is a set of concepts and design decisions about structure and texture of software that must be made prior to concurrent engineering (i.e., implementation) to enable effective satisfaction of architecturally significant, explicit functional and quality requirements, along with implicit requirements of the problem and the solution domains.
 
 * https://pkruchten.files.wordpress.com/2011/09/sarav1.pdf
+
+## Glossary
+
+### essential architecture
+
+The essential architecture of a software system is the structure of the system as manifested by its implementation (i.e. the source code).  Grady Booch distinguishes the essential architecture from both the source code and an architectural description (such as a design document), both of which are "reflections" of the architecture but are not the architecture itself.
+
+### forces on the system
+
+Grady Booch describes these as the "system’s [quality attribute](#quality-attribute) requirements and business goals."  They are thus the business and technical requirements that shape the design of the system.
+
+### quality attribute
+
+According to Wikipedia, a _quality attribute_ is another name for a [non-functional requirement](https://en.wikipedia.org/wiki/Non-functional_requirement), which is sometimes called an "ility", because many of them end with that suffix.  Examples include security, stability, extensibility, and performance.
