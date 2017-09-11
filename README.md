@@ -34,4 +34,4 @@ We typically send our newsletters to [firefox-dev](https://www.mozilla.org/en-US
 
 To support our conclusions we occasionally perform explorations and experiments. The first exploration is designed to support the notion that we can create a sync and storage layer in Rust that we can deploy to Desktop, Android and iOS.
 
-* [Deploying an Rust library on iOS](experiments/2017-0-06-rust-on-ios.md). A short tutorial describing how to build and deploy a rust library for use inside an iOS app.
+* [Deploying an Rust library on iOS](experiments/2017-09-06-rust-on-ios.md). A short tutorial describing how to build and deploy a rust library for use inside an iOS app.
