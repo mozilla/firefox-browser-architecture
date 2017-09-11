@@ -92,7 +92,7 @@ A Design Review should focus on:
 * Milestones and timelines
 * Resource allocation
 
-The key outcome for middle management is to understand the value proposition and the path to success. The key outcome for engineers is to understand the design constraints and the tradeoffs between them, which is important to avoid unnecessary re-work when implementation reality causes a re-think.
+The key outcome for middle management is to understand the value proposition and the path to success. The key outcome for engineers is firstly to understand the design constraints and the tradeoffs between them, which is important to avoid unnecessary re-work when implementation reality causes a re-think. Secondly, to provide a proposal detailed enough to begin an initial breakdown of engineering work for the proposal (although the work implied by the proposal should not be filed prior to the completion of the review).
 
 ### Structure and Inputs
 
