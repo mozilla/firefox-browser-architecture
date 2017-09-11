@@ -74,6 +74,8 @@ The first two considerations define the goals of the review process and are two 
 
 The audience of a Roadmap Review is those "up the chain" of decision makers and the audience of a Design Review is those running “down the chain” of implementors.
 
+In [RACI](https://en.wikipedia.org/wiki/Responsibility_assignment_matrix) terms, the team is Responsible, the chair is Accountable, other senior engineers or managers are Consulted and various others in the organization are Informed.
+
 A Roadmap Review should focus on:
 
 * The problem space
@@ -91,8 +93,6 @@ A Design Review should focus on:
 * Resource allocation
 
 The key outcomes are for middle management to understand the value proposition and the path to success and for engineers to understand the design constraints and the tradeoffs between them (this latter part is important when implementation reality causes a re-think, in which case we want to avoid unnecessary re-work).
-
-In [RACI](https://en.wikipedia.org/wiki/Responsibility_assignment_matrix) terms, the team is Responsible, the chair is Accountable, other senior engineers or managers are Consulted and various others in the organization are Informed.
 
 ### Structure and Inputs
 
