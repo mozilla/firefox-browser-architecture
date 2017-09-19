@@ -15,13 +15,13 @@ The website is built from [this GitHub repository](https://github.com/mozilla/fi
 
 We'd like to reduce or even remove XBL and XUL from the tree. It's becoming clear that replacing XBL is more important and easier than replacing XUL, so there are a few projects ongoing to learn more about it.
 
-A conversion of the behavioral <preference> binding is in progress at [Bug 1379338](https://bugzilla.mozilla.org/show_bug.cgi?id=1379338). Although this work started as a prototype, it resulted in a more straightforward implementation than we currently have, so is on the path to being landed.
+A conversion of the behavioral `<preference>` binding is in progress at [Bug 1379338](https://bugzilla.mozilla.org/show_bug.cgi?id=1379338). Although this work started as a prototype, it resulted in a more straightforward implementation than we currently have, so is on the path to being landed.
 
 As mentioned above, there’s some new [documentation](https://mozilla.github.io/firefox-browser-architecture/text/0004-xbl-web-components.html) comparing XBL with Web Components. There’s also a [visual tree](https://bgrins.github.io/xbl-analysis) of the bindings we use in Firefox and what features each uses.
 
 A prototype of replacing some XBL UI components in about:preferences with Custom Elements is attached to [Bug 1392367](https://bugzilla.mozilla.org/show_bug.cgi?id=1392367). This relies on a [forked version](https://github.com/webcomponents/custom-elements/compare/master...bgrins:firefox-browser-chrome?expand=1) of the [custom elements polyfill](https://github.com/webcomponents/custom-elements) made to work in XUL documents.
 
-A prototype of converting <tabbrowser> to a JS class is in progress at [Bug 1392352](https://bugzilla.mozilla.org/show_bug.cgi?id=1392352). This would cause gBrowser to become a JS object instead of a DOM Node. This conversion is semi-automated [by a script converting the binding to a JS class](https://github.com/bgrins/xbl-analysis/blob/ad87d682b937620b1c129e49c4081483c7074540/scripts/build-custom-elements.js).
+A prototype of converting `<tabbrowser>` to a JS class is in progress at [Bug 1392352](https://bugzilla.mozilla.org/show_bug.cgi?id=1392352). This would cause gBrowser to become a JS object instead of a DOM Node. This conversion is semi-automated [by a script converting the binding to a JS class](https://github.com/bgrins/xbl-analysis/blob/ad87d682b937620b1c129e49c4081483c7074540/scripts/build-custom-elements.js).
 
 ## Storage and Sync
 
