@@ -278,3 +278,9 @@ tags
 
 # JOE: Added manually
 .idea/
+
+# Jekyll: Added manually
+.sass-cache
+_site
+Gemfile
+Gemfile.lock
