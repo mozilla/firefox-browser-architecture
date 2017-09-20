@@ -38,6 +38,7 @@ The Review Packet includes:
     - the architecture being proposed
     - scenarios that exercise the requirements/goals against the proposed architecture
     - how the proposal handles these scenarios
+    - what review and discussion of the proposed architecture has already happened (and with whom)
   * A competitive analysis suggesting alternatives, costs, and opportunities
 
 3. The chair creates a list of questions to be discussed during the review. These questions should be:
