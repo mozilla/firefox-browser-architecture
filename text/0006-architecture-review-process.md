@@ -11,7 +11,7 @@ layout: text
 
 ## Introduction
 
-Architectural Review decisions within the Firefox organization fall into two categories: "Roadmap" and “Design”.
+Architectural Review decisions within the Firefox organization fall into two categories: "Roadmap" and "Design".
 
 Product Reviews are not within the scope of this process. This process is about architectural change, which should ultimately be in support of product features, but will generally have an effect on multiple product features. Architectural change can be growing new capabilities or in reducing large-scale technical debt.
 
@@ -26,7 +26,7 @@ For both a Roadmap Review and a Design Review the **timetable** is as follows:
 1. The team should lay the stage (see "initial meeting" below):
   * Document the **question** (or questions) to be resolved, which should be agreed between the team asking for review and the chair.
   * Find someone to **chair** the review:
-    - For a Roadmap Review this will be the *least* senior manager with the ability to address the problem in its entirety.
+    - For a Roadmap Review this will be the least senior manager with the ability to address the problem in its entirety.
     - For a Design Review this will be an experienced engineer in the problem domain outside of the team willing to put time into the problem. As engineers don’t review their own code they shouldn’t review their own designs. The principle is to get the most informed and least biased feedback possible.
 
 2. The team produces a **Review Packet** designed to answer the question identified in step 1. The production of the Review Packet is expected to be collaborative and iterative to ensure that the review focuses on the key questions and the team presents its best case. This is particularly true of a Roadmap Review where the consequences of the answer are likely to be more significant.
