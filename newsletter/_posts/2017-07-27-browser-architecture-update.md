@@ -1,11 +1,13 @@
 ---
 title: Browser Architecture Update
 layout: text
+description: The first of our newsletters introducing our work
+mailinglist: https://groups.google.com/d/msg/firefox-dev/ueRILL2ppac/RxR9lLPkAwAJ
 ---
 
 # Browser Architecture Update
 
-[Link to mailing-list archive](https://groups.google.com/d/msg/firefox-dev/ueRILL2ppac/RxR9lLPkAwAJ)
+[Link to mailing-list archive]({{ page.mailinglist }})
 
 In the spirit of the Quantum Flow and Photon Newsletters - an update on what the Browser Architecture team is doing:
 
