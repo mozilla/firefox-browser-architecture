@@ -1,7 +1,3 @@
----
-title: Firefox Browser Architecture
-layout: default
----
 
 # Firefox Browser Architecture
 
