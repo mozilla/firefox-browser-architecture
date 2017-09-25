@@ -28,7 +28,7 @@ This is a list of our findings that we're reasonably happy with so far.
 We typically send our newsletters to [firefox-dev](https://www.mozilla.org/en-US/about/forums/#firefox-dev).
 
 {% for post in site.categories.newsletter reversed %}
-* [{{ post.title }}]({{ post.url }}): {{ post.description }} [[mailing-list-post]({{ post.mailinglist }})]{% endfor %}
+* [{{ post.title }}]({{ site.baseurl }}{{ post.url }}): {{ post.description }} [[mailing-list-post]({{ post.mailinglist }})]{% endfor %}
 
 ## Explorations and Experiments
 
