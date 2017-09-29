@@ -11,7 +11,7 @@ layout: text
 
 ## Introduction
 
-Architectural Review decisions within the Firefox organization fall into two categories: "Roadmap" and “Design”.
+Architectural Reviews within the Firefox organization fall into two categories: "Roadmap" and "Design".
 
 Product Reviews are not within the scope of this process. This process is about architectural change, which should ultimately be in support of product features, but will generally have an effect on multiple product features. Architectural change can be growing new capabilities or in reducing large-scale technical debt.
 
@@ -23,13 +23,13 @@ A **Design Review** is to decide if the thing should be done in a particular way
 
 For both a Roadmap Review and a Design Review the **timetable** is as follows:
 
-1. The team should lay the stage (see "initial meeting" below):
-  * Document the **question** (or questions) to be resolved, which should be agreed between the team asking for review and the chair.
+1. The team should set the stage (see "initial meeting" below):
+  * Summarize in a one or two sentences the proposal to be reviewed. This should be agreed between the team asking for review and the chair.
   * Find someone to **chair** the review:
-    - For a Roadmap Review this will be the *least* senior manager with the ability to address the problem in its entirety.
+    - For a Roadmap Review this will be the least senior manager with the ability to address the problem in its entirety.
     - For a Design Review this will be an experienced engineer in the problem domain outside of the team willing to put time into the problem. As engineers don’t review their own code they shouldn’t review their own designs. The principle is to get the most informed and least biased feedback possible.
 
-2. The team produces a **Review Packet** designed to answer the question identified in step 1. The production of the Review Packet is expected to be collaborative and iterative to ensure that the review focuses on the key questions and the team presents its best case. This is particularly true of a Roadmap Review where the consequences of the answer are likely to be more significant.
+2. The team produces a **Review Packet** designed to document the proposal identified in step 1. The production of the Review Packet is expected to be collaborative and iterative to ensure that the review focuses on the key issues so the team presents its best case. This is particularly true of a Roadmap Review where the consequences of the review are likely to be more significant.
 The Review Packet includes:
   * A lay summary of the problem space and the stakeholders which is focused on defining a shared language and identifying the key forces behind the problem
   * A brief that explains what the team is proposing. This should read more like an encyclopedia entry than a marketing document. The audience is the people in the review; i.e. this should attempt to plug organizational documentation holes. The documentation process should not be more onerous than is required for the review. The brief should identify:
@@ -99,9 +99,9 @@ The key outcome for middle management is to understand the value proposition and
 
 The second two considerations shape how the review process actually happens.
 
-The chair and the team frame the question or questions at the start of the process to ensure agreement on what should be tested. The chair is accountable for answering the question or questions following the review process.
+The chair and the team frame the proposal at the start of the process to ensure agreement on what should be tested. The chair is accountable for summarizing the response to the proposal following the review process.
 
-In order to agree on the question(s), the chair and the team/technical lead or principals will generally have an initial meeting. This meeting should be as small as possible and is intended to:
+In order to agree on the proposal, the chair and the team/technical lead or principals will generally have an initial meeting. This meeting should be as small as possible and is intended to:
 
 * Establish vocabulary
 * Help the team "argue the right level" for the review
@@ -109,7 +109,7 @@ In order to agree on the question(s), the chair and the team/technical lead or p
 
 Subsequently, the team prepares a review packet detailing the problem space and their approach.
 
-The goal is to have the chair (representing the responsible decision makers) and the team establish some shared reality informally, and then to have the team document this and explain how their work addresses the decision maker’s question within that reality.
+The goal is to have the chair and the team establish some shared reality informally, and then to have the team document this and explain how their proposal would address the problem.
 
 The chair then evaluates and refines the team’s document with the assistance of domain experts and the identified stakeholders. Hopefully the consulted stakeholders concur with the framing of the problem and are aligned behind the architectural approach, but perhaps they are not. The chair collects such concerns and presents them. This should be a collaborative process whereby the architectural review functions to document a problem and a proposed solution, in which case the chair can solicit response from the team.
 
