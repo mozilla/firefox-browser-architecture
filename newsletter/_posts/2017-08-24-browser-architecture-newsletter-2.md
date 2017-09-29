@@ -1,11 +1,13 @@
 ---
 title: Browser Architecture Newsletter 2
 layout: text
+description: A follow-up with updates on XBL Conversion, Storage and Sync and Workflow Improvements
+mailinglist: https://groups.google.com/d/msg/firefox-dev/ueRILL2ppac/RxR9lLPkAwAJ
 ---
 
 # Browser Architecture Newsletter 2
 
-[Link to mailing-list archive](https://groups.google.com/d/msg/firefox-dev/Rc2w2a9e8HQ/vuJZffViCwAJ)
+[Link to mailing-list archive]({{ page.mailinglist }})
 
 Welcome to the second Browser Architecture Newsletter! Since our [last update](https://groups.google.com/forum/#!msg/firefox-dev/ueRILL2ppac/RxR9lLPkAwAJ;context-place=forum/firefox-dev), we have a [new website](https://mozilla.github.io/firefox-browser-architecture/) which includes posts about some of the [problems with XUL](https://mozilla.github.io/firefox-browser-architecture/text/0003-problems-with-xul.html), [extracting Necko](https://mozilla.github.io/firefox-browser-architecture/text/0002-extracting-necko.html) as a standalone component, and [comparing](https://mozilla.github.io/firefox-browser-architecture/text/0004-xbl-web-components.html) XBL with Web Components.
 

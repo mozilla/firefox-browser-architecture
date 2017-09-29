@@ -282,5 +282,4 @@ tags
 # Jekyll: Added manually
 .sass-cache
 _site
-Gemfile
 Gemfile.lock
