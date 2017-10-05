@@ -108,27 +108,27 @@ And that's it for our Rust library. Let's get it linked with an iOS project.
 
 Open Xcode and create a new project. Go to `File\New\Project…` and select the `iOS\Application\Single View Application` template. This template is as close to a default iOS app as it gets. Click `Next`.
 
-![Create new Swift project](assets/2017-09-06-rust-on-ios-new-project.png)
+![Create new Swift project](assets/2017-09-06-rust-on-ios/new-project.png)
 
 Call the project `Greetings`, make it a Swift project. Click `Next` to choose the location. We are using the  ios directory that we created earlier. If you choose another location you will have to amend some of the paths that we set later. Click `Create`.
 
-![Name project](assets/2017-09-06-rust-on-ios-name-project.png)
+![Name project](assets/2017-09-06-rust-on-ios/name-project.png)
 
 Select the Greetings project from the project navigator, and then ensure the Greetings target is selected. Open the `General` tab. Scroll down to the `Linked Frameworks and Libraries` section.
 
-![Link rust library](assets/2017-09-06-rust-on-ios-link-libs.png)
+![Link rust library](assets/2017-09-06-rust-on-ios/link-libs.png)
 
 Import your `libgreetings.a` library by either dragging it in from finder, or clicking the + at the bottom of the list, clicking 'Add other...' and navigating to `cargo/target/universal/release/`. Select `libgreetings.a` and then click `Open`.
 
 Link `libresolv.tbd`. Click the + at the bottom of the Linked Frameworks list and type libresolv into the search box. Select `libresolv.tbd` and then "Add".
 
-![Link libresolv](assets/2017-09-06-rust-on-ios-link-libresolv.png)
+![Link libresolv](assets/2017-09-06-rust-on-ios/link-libresolv.png)
 
 iOS will need a bridging header to access the C header we created. First, let's import `greetings.h` into our Xcode project so we can link to it. Go to `File\Add files to "Greetings"...` Navigate to `greetings.h` and select `Add`.
 
 To create our bridging header, go to `File\New\File...`. Select `iOS\Source\Header File` from the provided options and select `Next`. Name the file `Greetings-Bridging-Header.h` and select `Create`.
 
-![Create bridging header](assets/2017-09-06-rust-on-ios-bridging-header.png)
+![Create bridging header](assets/2017-09-06-rust-on-ios/bridging-header.png)
 
 Open the bridging header and amend it to look like the following:
 ```C
@@ -142,17 +142,17 @@ Open the bridging header and amend it to look like the following:
 
 We need to tell Xcode about the bridging header. Select the Greetings project from the project navigator, and then ensure the Greetings target is selected and open the Build Settings tab. Set the `Objective-C Bridging Header` option value to `$(PROJECT_DIR)/Greetings/Greetings-Bridging-Header.h`
 
-![Set bridging header location](assets/2017-09-06-rust-on-ios-build-settings-header.png)
+![Set bridging header location](assets/2017-09-06-rust-on-ios/build-settings-header.png)
 
 We also need to tell Xcode where to look for our libraries for linking. In the same Build Settings pane, amend the `Library Search Paths` option value to `$(PROJECT_DIR)/../../cargo/target/universal/release`
 
-![Link Library Search Paths](assets/2017-09-06-rust-on-ios-build-settings-search-paths.png)
+![Link Library Search Paths](assets/2017-09-06-rust-on-ios/build-settings-search-paths.png)
 
 Build your xcode project and everything should compile.
 
 So, now we have imported our Rust library into our iOS project and successfully linked to it. But we still need to call it. go to `File\New\File...`. Select `iOS\Source\Swift File` from the provided options and select `Next`. Name name it `RustGreetings`.
 
-![Create new Swift file](assets/2017-09-06-rust-on-ios-new-swift.png)
+![Create new Swift file](assets/2017-09-06-rust-on-ios/new-swift.png)
 
 Add the following code:
 ```swift
