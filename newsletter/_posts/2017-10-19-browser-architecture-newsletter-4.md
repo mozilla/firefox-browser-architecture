@@ -2,7 +2,7 @@
 title: Browser Architecture Newsletter 4
 layout: text
 description: A newsletter on architecture review, XBL Conversion, Storage and Sync, Workflow Improvements and a developer survey
-mailinglist: https://groups.google.com/forum/#!topic/firefox-dev/p9rTlfFUXlQ
+mailinglist: https://groups.google.com/forum/#!topic/firefox-dev/CLFtj8qUSv8
 ---
 
 # Browser Architecture Newsletter 4
