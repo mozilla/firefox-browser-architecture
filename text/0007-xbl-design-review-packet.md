@@ -111,6 +111,8 @@ Some of the bindings used in preferences (and throughout the browser) aren’t e
 *   **Maintainability** is key to improving our ability to evolve the codebase and avoid falling back into a technical debt trap.
 *   **Flexibility** is important to ensure that XBL replacements support the needs of the current (and anticipated future) codebase. Note, however, that replacements don’t have to exactly replicate all XBL functionality.
 *   **Reusability** (and the reuse of existing solutions, like Web Components, where applicable) is valuable to reduce the maintenance burden and the risk of obsolescence.
+*   **Accessibility** is required to allow as many people as possible to use the browser. Existing UI components support a number of accessibility features that should not be regressed by changes.
+
 
 ## Dependencies
 
