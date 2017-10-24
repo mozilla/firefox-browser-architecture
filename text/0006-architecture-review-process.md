@@ -28,6 +28,7 @@ For both a Roadmap Review and a Design Review the **timetable** is as follows:
   * Find a **reviewer**:
     - For a Roadmap Review this will be the least senior manager with the ability to address the problem in its entirety.
     - For a Design Review this will be an experienced engineer in the problem domain outside of the team willing to put time into the problem. As engineers don’t review their own code they shouldn’t review their own designs. The principle is to get the most informed and least biased feedback possible.
+  * Optionally, for larger reviews, find someone to **chair** the review. This enables to reviewer to concentrate on the problem rather than the admin of the review.
 
 2. The team produces a **Review Packet** designed to document the proposal identified in step 1. The production of the Review Packet is expected to be collaborative and iterative to ensure that the review focuses on the key issues so the team presents its best case. This is particularly true of a Roadmap Review where the consequences of the review are likely to be more significant.
 The Review Packet includes:
@@ -41,13 +42,13 @@ The Review Packet includes:
     - what review and discussion of the proposed architecture has already happened (and with whom)
   * A competitive analysis suggesting alternatives, costs, and opportunities
 
-3. The reviewer creates a list of questions to be discussed during the review. These questions should be:
+3. The chair or reviewer creates a list of questions to be discussed during the review. These questions should be:
   * Open-ended
   * Made available to the the team prior to the review so they can prepare answers
 
-4. The reviewer convenes a review meeting. The discussions of this meeting should be carefully minuted. The meeting comprises:
+4. The chair or reviewer convenes a review meeting. The discussions of this meeting should be carefully minuted. The meeting comprises:
   * The team making the proposal
-  * The reviewer
+  * The reviewer (and chair if used)
   * Other senior engineers who will provide valuable input
 
 The review meeting should be a discussion of the issues, but should avoid feeling pressured to make a decision. The goal is to understand the issues raised by the question(s) and the background from the review packet, and to add to it wisdom from the people at the review. The meeting may decide to alter the questions and undergo a subsequent review. We should be very open about conversations that happen after the review meeting.
