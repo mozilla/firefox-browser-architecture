@@ -24,8 +24,8 @@ A **Design Review** is to decide if the thing should be done in a particular way
 For both a Roadmap Review and a Design Review the **timetable** is as follows:
 
 1. The team should set the stage (see "initial meeting" below):
-  * Summarize in a one or two sentences the proposal to be reviewed. This should be agreed between the team asking for review and the chair.
-  * Find someone to **chair** the review:
+  * Summarize in a one or two sentences the proposal to be reviewed. This should be agreed between the team asking for review and the reviewer.
+  * Find a **reviewer**:
     - For a Roadmap Review this will be the least senior manager with the ability to address the problem in its entirety.
     - For a Design Review this will be an experienced engineer in the problem domain outside of the team willing to put time into the problem. As engineers don’t review their own code they shouldn’t review their own designs. The principle is to get the most informed and least biased feedback possible.
 
@@ -41,13 +41,13 @@ The Review Packet includes:
     - what review and discussion of the proposed architecture has already happened (and with whom)
   * A competitive analysis suggesting alternatives, costs, and opportunities
 
-3. The chair creates a list of questions to be discussed during the review. These questions should be:
+3. The reviewer creates a list of questions to be discussed during the review. These questions should be:
   * Open-ended
   * Made available to the the team prior to the review so they can prepare answers
 
-4. The chair convenes a review meeting. The discussions of this meeting should be carefully minuted. The meeting comprises:
+4. The reviewer convenes a review meeting. The discussions of this meeting should be carefully minuted. The meeting comprises:
   * The team making the proposal
-  * The chair
+  * The reviewer
   * Other senior engineers who will provide valuable input
 
 The review meeting should be a discussion of the issues, but should avoid feeling pressured to make a decision. The goal is to understand the issues raised by the question(s) and the background from the review packet, and to add to it wisdom from the people at the review. The meeting may decide to alter the questions and undergo a subsequent review. We should be very open about conversations that happen after the review meeting.
@@ -75,7 +75,7 @@ The first two considerations define the goals of the review process and are two 
 
 The audience of a Roadmap Review is those "up the chain" of decision makers and the audience of a Design Review is those running “down the chain” of implementors.
 
-In [RACI](https://en.wikipedia.org/wiki/Responsibility_assignment_matrix) terms, the team is Responsible, the chair is Accountable, other senior engineers or managers are Consulted and various others in the organization are Informed.
+In [RACI](https://en.wikipedia.org/wiki/Responsibility_assignment_matrix) terms, the team is Responsible, the reviewer is Accountable, other senior engineers or managers are Consulted and various others in the organization are Informed.
 
 A Roadmap Review should focus on:
 
@@ -99,9 +99,9 @@ The key outcome for middle management is to understand the value proposition and
 
 The second two considerations shape how the review process actually happens.
 
-The chair and the team frame the proposal at the start of the process to ensure agreement on what should be tested. The chair is accountable for summarizing the response to the proposal following the review process.
+The reviewer and the team frame the proposal at the start of the process to ensure agreement on what should be tested. The reviewer is accountable for summarizing the response to the proposal following the review process.
 
-In order to agree on the proposal, the chair and the team/technical lead or principals will generally have an initial meeting. This meeting should be as small as possible and is intended to:
+In order to agree on the proposal, the reviewer and the team/technical lead or principals will generally have an initial meeting. This meeting should be as small as possible and is intended to:
 
 * Establish vocabulary
 * Help the team "argue the right level" for the review
@@ -109,13 +109,13 @@ In order to agree on the proposal, the chair and the team/technical lead or prin
 
 Subsequently, the team prepares a review packet detailing the problem space and their approach.
 
-The goal is to have the chair and the team establish some shared reality informally, and then to have the team document this and explain how their proposal would address the problem.
+The goal is to have the reviewer and the team establish some shared reality informally, and then to have the team document this and explain how their proposal would address the problem.
 
-The chair then evaluates and refines the team’s document with the assistance of domain experts and the identified stakeholders. Hopefully the consulted stakeholders concur with the framing of the problem and are aligned behind the architectural approach, but perhaps they are not. The chair collects such concerns and presents them. This should be a collaborative process whereby the architectural review functions to document a problem and a proposed solution, in which case the chair can solicit response from the team.
+The reviewer then evaluates and refines the team’s document with the assistance of domain experts and the identified stakeholders. Hopefully the consulted stakeholders concur with the framing of the problem and are aligned behind the architectural approach, but perhaps they are not. The reviewer collects such concerns and presents them. This should be a collaborative process whereby the architectural review functions to document a problem and a proposed solution, in which case the reviewer can solicit response from the team.
 
 ### Process and Conduct
 
-Involving the team and the chair informally and subsequently sharing ownership of a document is designed to seed a collaborative process. A particular benefit is avoiding drift between the proposal and the focus of the review.
+Involving the team and the reviewer informally and subsequently sharing ownership of a document is designed to seed a collaborative process. A particular benefit is avoiding drift between the proposal and the focus of the review.
 
 An Architecture Review process can be formally mandated. This may work in environments with a large degree of formality and process. This isn't how Mozilla works. For an Architecture Review process to be successful at Mozilla it must be beneficial to the team undergoing review.
 
@@ -134,7 +134,7 @@ A project under review will be in one of the following states:
 
 Generally our review process focuses on projects in the “Roadmap” or “Design” stages. However a project in the “Execution” or “Landing” stage may need subsequent review to decide if the project is being done the correct way, or if it should be continued at all, so it may return to either of the “Roadmap” or “Design” phases.
 
-After the review, the chair and responsible decision makers should provide concrete recommendations and examples for the next teams to undergo the review process. The results should be disseminated as widely as possible, with the package documents and recommendation document archived. Some version of the decision should be publicly linked, so that it can be the decision of record, to which blog posts, mailing list posts, the message saying that the GitHub repository is obsolete, etc., can refer. The goal is to avoid critical technical and resourcing decisions being internally settled and only — later, begrudgingly — being made public on some mailing list. Or, per RACI, the goal is to broaden the set of those Informed.
+After the review, the reviewer and responsible decision makers should provide concrete recommendations and examples for the next teams to undergo the review process. The results should be disseminated as widely as possible, with the package documents and recommendation document archived. Some version of the decision should be publicly linked, so that it can be the decision of record, to which blog posts, mailing list posts, the message saying that the GitHub repository is obsolete, etc., can refer. The goal is to avoid critical technical and resourcing decisions being internally settled and only — later, begrudgingly — being made public on some mailing list. Or, per RACI, the goal is to broaden the set of those Informed.
 
 ## Additional Reading
 
