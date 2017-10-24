@@ -33,6 +33,7 @@ For both a Roadmap Review and a Design Review the **timetable** is as follows:
 2. The team produces a **Review Packet** designed to document the proposal identified in step 1. The production of the Review Packet is expected to be collaborative and iterative to ensure that the review focuses on the key issues so the team presents its best case. This is particularly true of a Roadmap Review where the consequences of the review are likely to be more significant.
 The Review Packet includes:
   * A lay summary of the problem space which is focused on defining a shared language and identifying the key forces behind the problem
+  * A vision of what the project will achieve on completion
   * A brief that explains what the team is proposing. This should read more like an encyclopedia entry than a marketing document. The audience is the people in the review; i.e. this should attempt to plug organizational documentation holes. The documentation process should not be more onerous than is required for the review. The brief should identify:
     - the non-functional requirements, like performance, security, and stability
     - the business goals, such as improving user satisfaction and retention
