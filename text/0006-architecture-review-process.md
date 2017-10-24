@@ -11,11 +11,11 @@ layout: text
 
 ## Introduction
 
-Architectural Reviews within the Firefox organization fall into two categories: "Roadmap" and "Design".
+Architectural Reviews within the Firefox organization fall into two categories: “Roadmap” and “Design”.
 
 Product Reviews are not within the scope of this process. This process is about architectural change, which should ultimately be in support of product features, but will generally have an effect on multiple product features. Architectural change can be growing new capabilities or in reducing large-scale technical debt.
 
-The function of a **Roadmap Review** is to decide if a thing should be done. The goal is to bring together a packet of data to inform a management decision to provide resources to make the thing happen. A Roadmap Review should happen early in the process so that build time isn’t wasted on a "No" decision, but so that enough information is available to management.
+The function of a **Roadmap Review** is to decide if a thing should be done. The goal is to bring together a packet of data to inform a management decision to provide resources to make the thing happen. A Roadmap Review should happen early in the process so that build time isn’t wasted on a “No” decision, but so that enough information is available to management.
 
 A **Design Review** is to decide if the thing should be done in a particular way. The goal is to ensure that the problem space is understood well enough that a realistic bug breakdown can be made, that those working on the problem all agree on the challenge, and that work can be prioritized to hit the hardest parts of the problem first (in order to get early warning if the hard parts prove impossible or to inform schedule projections early).
 
@@ -75,7 +75,7 @@ For both a Roadmap Review and a Design Review the goal is to hear perspectives t
 
 The first two considerations define the goals of the review process and are two sides of the same coin.
 
-The audience of a Roadmap Review is those "up the chain" of decision makers and the audience of a Design Review is those running “down the chain” of implementors.
+The audience of a Roadmap Review is those “up the chain” of decision makers and the audience of a Design Review is those running “down the chain” of implementors.
 
 In [RACI](https://en.wikipedia.org/wiki/Responsibility_assignment_matrix) terms, the team is Responsible, the reviewer is Accountable, other senior engineers or managers are Consulted and various others in the organization are Informed.
 
@@ -106,7 +106,7 @@ The reviewer and the team frame the proposal at the start of the process to ensu
 In order to agree on the proposal, the reviewer and the team/technical lead or principals will generally have an initial meeting. This meeting should be as small as possible and is intended to:
 
 * Establish vocabulary
-* Help the team "argue the right level" for the review
+* Help the team “argue the right level” for the review
 * Identify stakeholders and domain experts — those Consulted, per RACI — in the organization
 
 Subsequently, the team prepares a review packet detailing the problem space and their approach.
@@ -129,10 +129,10 @@ The final two considerations shape what is reviewed and how the review concludes
 
 A project under review will be in one of the following states:
 
-* The "Roadmap" stage: the team has a proposal, and wants broader buy-in to justify investment in the problem space
-* The "Design" stage: the problem space is considered valuable, and the team wants to commit to one path through the solution space
-* The "Execution" stage: the team is actively pursuing a solution
-* The "Landing" stage: the team is verifying the solution meets expectations
+* The “Roadmap” stage: the team has a proposal, and wants broader buy-in to justify investment in the problem space
+* The “Design” stage: the problem space is considered valuable, and the team wants to commit to one path through the solution space
+* The “Execution” stage: the team is actively pursuing a solution
+* The “Landing” stage: the team is verifying the solution meets expectations
 
 Generally our review process focuses on projects in the “Roadmap” or “Design” stages. However a project in the “Execution” or “Landing” stage may need subsequent review to decide if the project is being done the correct way, or if it should be continued at all, so it may return to either of the “Roadmap” or “Design” phases.
 
