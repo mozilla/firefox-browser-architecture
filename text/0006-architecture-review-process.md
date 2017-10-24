@@ -138,6 +138,12 @@ Generally our review process focuses on projects in the “Roadmap” or “Desi
 
 After the review, the reviewer and responsible decision makers should provide concrete recommendations and examples for the next teams to undergo the review process. The results should be disseminated as widely as possible, with the package documents and recommendation document archived. Some version of the decision should be publicly linked, so that it can be the decision of record, to which blog posts, mailing list posts, the message saying that the GitHub repository is obsolete, etc., can refer. The goal is to avoid critical technical and resourcing decisions being internally settled and only — later, begrudgingly — being made public on some mailing list. Or, per RACI, the goal is to broaden the set of those Informed.
 
+## Examples
+
+The following reviews have been completed and can be used as a template for a successful architectural review.
+
+* [XBL Removal](https://mozilla.github.io/firefox-browser-architecture/text/0007-xbl-design-review-packet.html)
+
 ## Additional Reading
 
 ### Multiple Perspectives On Technical Problems and Solutions - John Allspaw - 2017
