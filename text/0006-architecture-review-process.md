@@ -48,10 +48,11 @@ The Review Packet includes:
   * Made available to the the team prior to the review so they can prepare answers
 
 4. The chair or reviewer convenes a review meeting. The discussions of this meeting should be carefully minuted.
-  * The meeting comprises:
-    * The team making the proposal
-    * The reviewer (and chair if used)
-    * Other senior engineers who will provide valuable input
+  * The meeting should have a limited attendance to avoid a sprawling unfocussed meeting, but it should include:
+    * The team making the proposal, the reviewer (and chair if used)
+    * Others who will provide valuable input, taking care to:
+      * Select a full range of perspectives
+      * Avoid “stacking the deck” with too many people that think the same way
   * A suggested agenda for the review meeting:
     * Short opening statement by the team on the current state of play
     * Discussion of Questions and Answers (see 3. above)
