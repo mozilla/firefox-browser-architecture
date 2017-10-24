@@ -23,7 +23,7 @@ A **Design Review** is to decide if the thing should be done in a particular way
 
 For both a Roadmap Review and a Design Review the **timetable** is as follows:
 
-1. The team should set the stage (see "initial meeting" below):
+1. The team should set the stage:
   * Summarize in a one or two sentences the proposal to be reviewed. This should be agreed between the team asking for review and the reviewer.
   * Find a **reviewer**:
     - For a Roadmap Review this will be the least senior manager with the ability to address the problem in its entirety.
