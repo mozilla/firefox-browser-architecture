@@ -36,9 +36,9 @@ The Review Packet includes:
   * A list of the groups directly affected by the proposal to ensure that the review meeting includes representatives from those groups.
   * A vision of what the project will achieve on completion
   * A brief that explains what the team is proposing. This should read more like an encyclopedia entry than a marketing document. The audience is the people in the review; i.e. this should attempt to plug organizational documentation holes. The documentation process should not be more onerous than is required for the review. The brief should identify:
-    - the non-functional requirements, like performance, security, and stability
-    - the business goals, such as improving user satisfaction and retention
     - the architecture being proposed
+    - the non-functional requirements, like accessibility, performance, security, and stability
+    - relevant business goals, such as improving user satisfaction and retention
     - scenarios that exercise the requirements/goals against the proposed architecture
     - how the proposal handles these scenarios
     - what review and discussion of the proposed architecture has already happened (and with whom)
