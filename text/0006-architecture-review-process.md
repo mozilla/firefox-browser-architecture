@@ -24,11 +24,11 @@ A **Design Review** is to decide if the thing should be done in a particular way
 For both a Roadmap Review and a Design Review the **timetable** is as follows:
 
 1. The team should set the stage:
-  * Summarize in a one or two sentences the proposal to be reviewed. This should be agreed between the team asking for review and the reviewer.
+  * Summarize in one or two sentences the proposal to be reviewed. This should be agreed between the team asking for review and the reviewer.
   * Find a **reviewer**:
     - For a Roadmap Review this will be the least senior manager with the ability to address the problem in its entirety.
     - For a Design Review this will be an experienced engineer in the problem domain outside of the team willing to put time into the problem. As engineers don’t review their own code they shouldn’t review their own designs. The principle is to get the most informed and least biased feedback possible.
-  * Optionally, for larger reviews, find someone to **chair** the review. This enables to reviewer to concentrate on the problem rather than the admin of the review.
+  * Optionally, for larger reviews, find someone to **chair** the review. This can facilitate the process (i.e. scheduling the meeting, managing the clock, ensuring minutes are taken, etc.) and enables to reviewer to concentrate on the review itself.
 
 2. The team produces a **Review Packet** designed to document the proposal identified in step 1. The production of the Review Packet is expected to be collaborative and iterative to ensure that the review focuses on the key issues so the team presents its best case. This is particularly true of a Roadmap Review where the consequences of the review are likely to be more significant.
 The Review Packet includes:
