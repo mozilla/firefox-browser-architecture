@@ -28,7 +28,7 @@ For both a Roadmap Review and a Design Review the **timetable** is as follows:
   * Find a **reviewer**:
     - For a Roadmap Review this will be the least senior manager with the ability to address the problem in its entirety.
     - For a Design Review this will be an experienced engineer in the problem domain outside of the team willing to put time into the problem. As engineers don’t review their own code they shouldn’t review their own designs. The principle is to get the most informed and least biased feedback possible.
-  * Optionally, for larger reviews, find someone to **chair** the review. This can facilitate the process (i.e. scheduling the meeting, managing the clock, ensuring minutes are taken, etc.) and enables to reviewer to concentrate on the review itself. The rest of this document uses 'chair' for the administrative role. For smaller reviews the reviewer also does the tasks of the chair.
+  * Optionally, for larger reviews, find someone to **chair** the review. This can facilitate the process (i.e. scheduling the meeting, managing the clock, ensuring minutes are taken, etc.) and enables the reviewer to concentrate on the review itself. The rest of this document uses 'chair' for the administrative role. For smaller reviews the reviewer also does the tasks of the chair.
 
 2. The team produces a **Review Packet** designed to document the proposal identified in step 1. The production of the Review Packet is expected to be collaborative and iterative to ensure that the review focuses on the key issues so the team presents its best case. This is particularly true of a Roadmap Review where the consequences of the review are likely to be more significant.
 The Review Packet includes:
