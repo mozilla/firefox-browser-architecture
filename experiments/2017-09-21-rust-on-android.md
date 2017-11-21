@@ -7,14 +7,14 @@ layout: text
 
 Following on from the last post on getting a Rust library [building on iOS](https://mozilla.github.io/firefox-browser-architecture/experiments/2017-09-06-rust-on-ios.html), we're now going to deploy the same library on Android.
 
-In order to do Android development, we'll need to set up our Android environment. First we need to install [Android Studio](https://developer.android.com/studio/index.html). Once Android Studio is installed, we'll need to install the NDK (Native Development Kit). 
+In order to do Android development, we'll need to set up our Android environment. First we need to install [Android Studio](https://developer.android.com/studio/index.html). Once Android Studio is installed, we'll need to install the NDK (Native Development Kit).
 
 Open Android Studio. From the toolbar, go to `Android Studio > Preferences > Appearance & Behaviour > Android SDK > SDK Tools`. Check the following options for installation and click `OK`.
 
     * Android SDK Tools
-    * NDK 
-    * CMake 
-    * LLDB 
+    * NDK
+    * CMake
+    * LLDB
 
 Once the NDK and associated tools have been installed, we need to set a few environment variables, first for the SDK path and the second for the NDK path. Set the following envvars:
 
@@ -82,7 +82,7 @@ mkdir android
 
 `cargo new cargo` sets up a brand new Rust project with its default files and directories in a directory called `rust`. The name of the directory is not important. In this directory is a file called `Cargo.toml`, which is the package manager descriptor file, and there is be a subdirectory, `src`, which contains a file called `lib.rs`. This will contain the Rust code that we will be executing.
 
-Our Rust project here is a super simple Hello World library. It contains a function `rust_greeting` that takes a string argument and return a greeting including that argument. Therefore, if the argument is "world", the returned string is "Hello world". 
+Our Rust project here is a super simple Hello World library. It contains a function `rust_greeting` that takes a string argument and return a greeting including that argument. Therefore, if the argument is "world", the returned string is "Hello world".
 
 Open `cargo/src/lib.rs` and enter the following code.
 
@@ -102,17 +102,17 @@ pub extern fn rust_greeting(to: *const c_char) -> *mut c_char {
 }
 ```
 
-Let's take a look at what is going on here. 
+Let's take a look at what is going on here.
 
 As we will be calling this library from non-Rust code, we will actually be calling it through a C bridge. `#[no_mangle]` tells the compiler not to mangle the function name as it usually does by default, ensuring our function name is exported as if it had been written in C.
 
 `extern` tells the Rust compiler that this function will be called from outside of Rust and to therefore ensure that it is compiled using C calling conventions.
 
-The string that `rust_greeting` accepts is a pointer to a C char array. We have to then convert the string from a C string to a Rust `str`. First we create a `CStr` object from the pointer. We then convert it to a `str` and check the result. If an error has occurred, then no arg was provided and we substitute `there`, otherwise we use the value of the provided string. We then append the provided string on the end of our greeting string to create our return string. The return string is then converted into a `CString` and passed back into C code. 
+The string that `rust_greeting` accepts is a pointer to a C char array. We have to then convert the string from a C string to a Rust `str`. First we create a `CStr` object from the pointer. We then convert it to a `str` and check the result. If an error has occurred, then no arg was provided and we substitute `there`, otherwise we use the value of the provided string. We then append the provided string on the end of our greeting string to create our return string. The return string is then converted into a `CString` and passed back into C code.
 
 Now let's create our Android project.
 
-Open Android Studio and select `Start a New Android Project` from the options. 
+Open Android Studio and select `Start a New Android Project` from the options.
 
 ![Create new Android project](assets/2017-09-21-rust-on-android/new-project.png)
 
@@ -124,7 +124,7 @@ On the next screen, make sure the `Phone and Tablet` option is selected. Click `
 
 ![Choose form factor](assets/2017-09-21-rust-on-android/form-factors.png)
 
-Now we will be asked to choose a starting activity. Select the `Empty Activity` option and click `Next`. 
+Now we will be asked to choose a starting activity. Select the `Empty Activity` option and click `Next`.
 
 ![Choose starting activity](assets/2017-09-21-rust-on-android/add-activity.png)
 
@@ -167,30 +167,39 @@ pub mod android {
 
     #[no_mangle]
     pub unsafe extern fn Java_com_mozilla_greetings_RustGreetings_greeting(env: JNIEnv, _: JClass, java_pattern: JString) -> jstring {
+        // Our Java companion code might pass-in "world" as a string, hence the name.
         let world = rust_greeting(env.get_string(java_pattern).expect("invalid pattern string").as_ptr());
-        let output = env.new_string(CStr::from_ptr(world).to_str().unwrap()).expect("Couldn't create java string!");
-        rust_greeting_free(world);
+        // Retake pointer so that we can use it below and allow memory to be freed when it goes out of scope.
+        let world_ptr = CString::from_raw(world);
+        let output = env.new_string(world_ptr.to_str().unwrap()).expect("Couldn't create java string!");
 
         output.into_inner()
     }
 }
 ```
 
-The first line here `#[cfg(target_os="android")]` is telling the compiler to target Android when compiling this module. `#[cfg]` is a special attribute that allows you to compile code based on a flag passed to the compiler. 
+The first line here `#[cfg(target_os="android")]` is telling the compiler to target Android when compiling this module. `#[cfg]` is a special attribute that allows you to compile code based on a flag passed to the compiler.
 
-The second line, `#[allow(non_snake_case)]`, tells the compiler not to warn if we are not using `snake_case` for a variable or function name. The Rust compiler is very strict — this is one of the things that makes Rust great — and it enforces the use of `snake_case` throughout. However, we defined our class name and native method in our Android project using Java coding conventions which is `camelCase` and `UpperCamelCase` and we don't want to change this or our Java code will look wrong. Given the way that JNI constructs native function names, we need to tell the Rust compiler to go easy on us in this instance. This flag will apply to all functions and variables created inside this module that we are creating, called `android`. 
+The second line, `#[allow(non_snake_case)]`, tells the compiler not to warn if we are not using `snake_case` for a variable or function name. The Rust compiler is very strict — this is one of the things that makes Rust great — and it enforces the use of `snake_case` throughout. However, we defined our class name and native method in our Android project using Java coding conventions which is `camelCase` and `UpperCamelCase` and we don't want to change this or our Java code will look wrong. Given the way that JNI constructs native function names, we need to tell the Rust compiler to go easy on us in this instance. This flag will apply to all functions and variables created inside this module that we are creating, called `android`.
 
-After declaring that we need the `jni` crate, and importing some useful objects from it, we can declare our function. This function needs to be marked `unsafe` because we will be dealing with pointers from a language that allows null pointers, but our code doesn't check for `NULL`. This situation would never happen in Rust only code as the Rust compiler enforces memory safety. By marking the function as not memory safe, we are alerting other Rust functions that it may not be able to deal with a null pointer. `extern` defines the function as one that will be exposed to other languages. 
+After declaring that we need the `jni` crate, and importing some useful objects from it, we can declare our function. This function needs to be marked `unsafe` because we will be dealing with pointers from a language that allows null pointers, but our code doesn't check for `NULL`. This situation would never happen in Rust only code as the Rust compiler enforces memory safety. By marking the function as not memory safe, we are alerting other Rust functions that it may not be able to deal with a null pointer. `extern` defines the function as one that will be exposed to other languages.
 
-As arguments, along with the `JString` that our Java function declaration said that we will be providing, we also need to take an instance of the `JNIEnv` and a class reference. The `JNIEnv` will be the object we will use to read values associated with the pointers that we are taking as argument.
+As arguments, along with the `JString` that our Java function declaration said that we will be providing, we also need to take an instance of the `JNIEnv` and a class reference (which is unused in this example). The `JNIEnv` will be the object we will use to read values associated with the pointers that we are taking as argument.
 
-Next, we read the string in from the `JNIEnv` and convert it into a C pointer to pass to `rust_greeting`. The result of that function is another C pointer, which we then need to convert to a back into a String. Using the `JNIEnv` transfers the ownership of the object to Java, but there is still a reference hanging around held by our Rust code. We need to call `rust_greetings_free` to free that memory. Then we return our String.
+Next, we read the string in from the `JNIEnv` and convert it into a C pointer to pass to `rust_greeting`. The result of that function is another C pointer, which we then need to convert to a back into a String. Using the `JNIEnv` transfers the ownership of the object to Java, but there is still a reference hanging around held by our Rust code. That memory will be freed as `world_ptr` goes out of scope. Then we return our String.
 
 We declared that we needed the `jni` crate, that means we need to include the crate in the `Cargo.toml` file. Open it up and add the following between the `[package]` and `[lib]` declarations.
 
 ```
 [target.'cfg(target_os="android")'.dependencies]
 jni = { version = "0.5", default-features = false }
+```
+
+We also need to tell the compiler what type of a library it should produce. You can specify this in the `Cargo.toml` file's `[lib]` section:
+
+```
+[lib]
+crate-type = ["dylib"]
 ```
 
 We are now ready to build our libraries. Unlike with iOS, there is no handy universal Android library that we can make so we have to create one for each of our target architectures. We can then create symlinks to them from the Android project. You will need to use absolute paths to your libraries here, not relative ones, otherwise Android Studio will not be able to follow the link. Navigate to your `cargo` directory and run the following commands:
@@ -206,9 +215,9 @@ mkdir jniLibs/arm64
 mkdir jniLibs/armeabi
 mkdir jniLibs/x86
 
-ln -s <path>/cargo/target/aarch64-linux-android/release/libgreetings.so jniLibs/arm64/libgreetings.so
-ln -s <path>/cargo/target/armv7-linux-androideabi/release/libgreetings.so jniLibs/armeabi/libgreetings.so
-ln -s <path>/cargo/target/i686-linux-android/release/libgreetings.so jniLibs/x86/libgreetings.so
+ln -s <project_path>/greetings/cargo/target/aarch64-linux-android/release/libgreetings.so jniLibs/arm64/libgreetings.so
+ln -s <project_path>/greetings/cargo/target/armv7-linux-androideabi/release/libgreetings.so jniLibs/armeabi/libgreetings.so
+ln -s <project_path>/greetings/cargo/target/i686-linux-android/release/libgreetings.so jniLibs/x86/libgreetings.so
 ```
 
 Now, head back to Android Studio and open `GreetingsActivity.java`. We need to load our Rust library when the app starts, so add the following lines below the class declaration and before the `onCreate` method.
