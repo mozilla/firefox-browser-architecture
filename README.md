@@ -28,8 +28,10 @@ This is a list of our findings that we're reasonably happy with so far.
 
 We typically send our newsletters to [firefox-dev](https://www.mozilla.org/en-US/about/forums/#firefox-dev).
 
-{% for post in site.categories.newsletter reversed %}
-* [{{ post.title }}]({{ site.baseurl }}{{ post.url }}): {{ post.description }} [[mailing-list-post]({{ post.mailinglist }})]{% endfor %}
+* [Browser Architecture Update](posts/2017-07-27-browser-architecture-update.md). See also [mailing-list-post](https://groups.google.com/forum/#!msg/firefox-dev/ueRILL2ppac/RxR9lLPkAwAJ).
+* [Browser Architecture Newsletter #2](posts/2017-08-24-browser-architecture-newsletter-2.md). See also [mailing-list-post](https://groups.google.com/forum/#!topic/firefox-dev/Rc2w2a9e8HQ).
+* [Browser Architecture Newsletter #3](posts/2017-09-22-browser-architecture-newsletter-3.md). See also [mailing-list-post](https://groups.google.com/forum/#!topic/firefox-dev/Rc2w2a9e8HQ).
+* [Browser Architecture Newsletter #4](posts/2017-10-19-browser-architecture-newsletter-4.md). See also [mailing-list-post](https://groups.google.com/forum/#!topic/firefox-dev/Rc2w2a9e8HQ).
 
 ## Explorations and Experiments
 
