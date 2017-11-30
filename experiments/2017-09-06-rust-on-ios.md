@@ -34,7 +34,7 @@ mkdir ios
 
 ```
 
-`cargo new cargo` sets up a brand new Rust project with it's default files and directories in a directory called `cargo`. In this directory is a file called `Cargo.toml`, which is the package manager descriptor file, and there is be a subdirectory, `src`, which contains a file called `lib.rs`. This will contain the Rust code that we will be executing.
+`cargo new cargo` sets up a brand new Rust project with its default files and directories in a directory called `cargo`. In this directory is a file called `Cargo.toml`, which is the package manager descriptor file, and there is be a subdirectory, `src`, which contains a file called `lib.rs`. This will contain the Rust code that we will be executing.
 
 Our Rust project here is a super simple Hello World library. It contains a function `rust_greeting` that takes a string argument and return a string greeting that argument. Therefore, if the argument is "world", the returned string is "Hello world".
 
