@@ -25,6 +25,7 @@ This is a list of our findings that we're reasonably happy with so far.
 * [XBL Design Review packet](text/0007-xbl-design-review-packet.md) is the packet that we prepared for the architectural design review for XBL removal.
 * [Roadmap Review: Sync and Storage](text/0008-sync-and-storage-review-packet.md) establishes that storage and syncing of user data is a pillar of the Firefox ecosystem, warranting holistic and long-term attention, and outlines where we’d like to end up and some ideas for how to get there.
 * [JavaScript Type Safety Systems](text/0009-type-safety-systems.md) are some conclusions of an investigation into the use of JavaScript type safety systems.
+* [Firefox Data Stores Documentation](text/0010-firefox-data-stores.md) documents the existing data stores across all current Firefox platforms.
 
 ## Posts
 
