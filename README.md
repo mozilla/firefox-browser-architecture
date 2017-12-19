@@ -26,6 +26,7 @@ This is a list of our findings that we're reasonably happy with so far.
 * [Roadmap Review: Sync and Storage](text/0008-sync-and-storage-review-packet.md) establishes that storage and syncing of user data is a pillar of the Firefox ecosystem, warranting holistic and long-term attention, and outlines where we’d like to end up and some ideas for how to get there.
 * [JavaScript Type Safety Systems](text/0009-type-safety-systems.md) are some conclusions of an investigation into the use of JavaScript type safety systems.
 * [Firefox Data Stores Documentation](text/0010-firefox-data-stores.md) documents the existing data stores across all current Firefox platforms.
+* [Fluent in Prefs Design Review](text/0011-fluent-in-prefs-design-review.md) describes the lightweight design review for Fluent in Prefs.
 
 ## Posts
 
