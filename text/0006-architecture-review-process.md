@@ -63,6 +63,8 @@ The review meeting should be a discussion of the issues, but should avoid feelin
 
 The ideal review process scales well. The same basic system should work for a quick 2 person decision over the best way to design a certain feature, and for a critical organization-wide decision about a path to take. The term “team” is used above although we strongly recommend design reviews for smaller questions. If you feel yourself wondering if some design is best, it should be easy to perform a review.
 
+For particularly small reviews it is possible to merge a roadmap review and design review into a single review, in which case the question is both 'should we do this', and 'should we do it this way'. It is possible to conduct combined reviews where the total time for the review for all participants was 1 working day.
+
 For both a Roadmap Review and a Design Review the goal is to hear perspectives that will lead to a better definition of a problem or solution, and better judgment about whether it should be solved or how to solve it.
 
 ## Rationale
