@@ -24,40 +24,40 @@ A **Design Review** is to decide if the thing should be done in a particular way
 For both a Roadmap Review and a Design Review the **timetable** is as follows:
 
 1. The team should set the stage:
-  * Summarize in one or two sentences the proposal to be reviewed. This should be agreed between the team asking for review and the reviewer.
-  * Find a **reviewer**:
-    - For a Roadmap Review this will be the least senior manager with the ability to address the problem in its entirety.
-    - For a Design Review this will be an experienced engineer in the problem domain outside of the team willing to put time into the problem. As engineers don’t review their own code they shouldn’t review their own designs. The principle is to get the most informed and least biased feedback possible.
-  * Optionally, for larger reviews, find someone to **chair** the review. This can facilitate the process (i.e. scheduling the meeting, managing the clock, ensuring minutes are taken, etc.) and enables the reviewer to concentrate on the review itself. The rest of this document uses 'chair' for the administrative role. For smaller reviews the reviewer also does the tasks of the chair.
+    * Summarize in one or two sentences the proposal to be reviewed. This should be agreed between the team asking for review and the reviewer.
+    * Find a **reviewer**:
+      - For a Roadmap Review this will be the least senior manager with the ability to address the problem in its entirety.
+      - For a Design Review this will be an experienced engineer in the problem domain outside of the team willing to put time into the problem. As engineers don’t review their own code they shouldn’t review their own designs. The principle is to get the most informed and least biased feedback possible.
+    * Optionally, for larger reviews, find someone to **chair** the review. This can facilitate the process (i.e. scheduling the meeting, managing the clock, ensuring minutes are taken, etc.) and enables the reviewer to concentrate on the review itself. The rest of this document uses 'chair' for the administrative role. For smaller reviews the reviewer also does the tasks of the chair.
 
 2. The team produces a **Review Packet** designed to document the proposal identified in step 1. The production of the Review Packet is expected to be collaborative and iterative to ensure that the review focuses on the key issues so the team presents its best case. This is particularly true of a Roadmap Review where the consequences of the review are likely to be more significant.
 The Review Packet includes:
-  * A lay summary of the problem space which is focused on defining a shared language and identifying the key forces behind the problem
-  * A list of the groups directly affected by the proposal to ensure that the review meeting includes representatives from those groups.
-  * A vision of what the project will achieve on completion
-  * A brief that explains what the team is proposing. This should read more like an encyclopedia entry than a marketing document. The audience is the people in the review; i.e. this should attempt to plug organizational documentation holes. The documentation process should not be more onerous than is required for the review. The brief should identify:
-    - the architecture being proposed
-    - the non-functional requirements, like accessibility, performance, security, and stability
-    - relevant business goals, such as improving user satisfaction and retention
-    - scenarios that exercise the requirements/goals against the proposed architecture
-    - how the proposal handles these scenarios
-    - what review and discussion of the proposed architecture has already happened (and with whom)
-  * A competitive analysis suggesting alternatives, costs, and opportunities
+    * A lay summary of the problem space which is focused on defining a shared language and identifying the key forces behind the problem
+    * A list of the groups directly affected by the proposal to ensure that the review meeting includes representatives from those groups.
+    * A vision of what the project will achieve on completion
+    * A brief that explains what the team is proposing. This should read more like an encyclopedia entry than a marketing document. The audience is the people in the review; i.e. this should attempt to plug organizational documentation holes. The documentation process should not be more onerous than is required for the review. The brief should identify:
+      - the architecture being proposed
+      - the non-functional requirements, like accessibility, performance, security, and stability
+      - relevant business goals, such as improving user satisfaction and retention
+      - scenarios that exercise the requirements/goals against the proposed architecture
+      - how the proposal handles these scenarios
+      - what review and discussion of the proposed architecture has already happened (and with whom)
+    * A competitive analysis suggesting alternatives, costs, and opportunities
 
 3. The reviewer creates a list of questions to be discussed during the review. These questions should be:
-  * Open-ended
-  * Made available to the the team prior to the review so they can prepare answers
+    * Open-ended
+    * Made available to the the team prior to the review so they can prepare answers
 
 4. The chair convenes a review meeting. The discussions of this meeting should be carefully minuted.
-  * The meeting should have a limited attendance to avoid a sprawling unfocussed meeting, but it should include:
-    * The team making the proposal
-    * Others who will provide valuable input, taking care to:
-      * Select a full range of perspectives
-      * Avoid “stacking the deck” with too many people that think the same way
-  * A suggested agenda for the review meeting:
-    * Short opening statement by the team on the current state of play
-    * Discussion of Questions and Answers (see 3. above)
-    * A step back to discuss if the proposal is right in the wider context
+    * The meeting should have a limited attendance to avoid a sprawling unfocussed meeting, but it should include:
+      - The team making the proposal
+      - Others who will provide valuable input, taking care to:
+        + Select a full range of perspectives
+        + Avoid “stacking the deck” with too many people that think the same way
+    * A suggested agenda for the review meeting:
+      - Short opening statement by the team on the current state of play
+      - Discussion of Questions and Answers (see 3. above)
+      - A step back to discuss if the proposal is right in the wider context
 
 The review meeting should be a discussion of the issues, but should avoid feeling pressured to make a decision. The goal is to understand the issues raised by the question(s) and the background from the review packet, and to add to it wisdom from the people at the review. The meeting may decide to alter the questions and undergo a subsequent review. We should be very open about conversations that happen after the review meeting.
 
