@@ -86,8 +86,6 @@ The first two considerations define the goals of the review process and are two 
 
 The audience of a Roadmap Review is those “up the chain” of decision makers and the audience of a Design Review is those running “down the chain” of implementors.
 
-In [RACI](https://en.wikipedia.org/wiki/Responsibility_assignment_matrix) terms, the team is Responsible, the reviewer is Accountable, other senior engineers or managers are Consulted and various others in the organization are Informed.
-
 A Roadmap Review should focus on:
 
 * The problem space
@@ -116,7 +114,7 @@ In order to agree on the proposal, the reviewer and the team/technical lead or p
 
 * Establish vocabulary
 * Help the team “argue the right level” for the review
-* Identify stakeholders and domain experts — those Consulted, per RACI — in the organization
+* Identify stakeholders and domain experts — those Consulted
 
 Subsequently, the team prepares a review packet detailing the problem space and their approach.
 
@@ -145,7 +143,7 @@ A project under review will be in one of the following states:
 
 Generally our review process focuses on projects in the “Roadmap” or “Design” stages. However a project in the “Execution” or “Landing” stage may need subsequent review to decide if the project is being done the correct way, or if it should be continued at all, so it may return to either of the “Roadmap” or “Design” phases.
 
-After the review, the reviewer and responsible decision makers should provide concrete recommendations and examples for the next teams to undergo the review process. The results should be disseminated as widely as possible, with the package documents and recommendation document archived. Some version of the decision should be publicly linked, so that it can be the decision of record, to which blog posts, mailing list posts, the message saying that the GitHub repository is obsolete, etc., can refer. The goal is to avoid critical technical and resourcing decisions being internally settled and only — later, begrudgingly — being made public on some mailing list. Or, per RACI, the goal is to broaden the set of those Informed.
+After the review, the reviewer and responsible decision makers should provide concrete recommendations and examples for the next teams to undergo the review process. The results should be disseminated as widely as possible, with the package documents and recommendation document archived. Some version of the decision should be publicly linked, so that it can be the decision of record, to which blog posts, mailing list posts, the message saying that the GitHub repository is obsolete, etc., can refer. The goal is to avoid critical technical and resourcing decisions being internally settled and only — later, begrudgingly — being made public on some mailing list.
 
 ## Examples
 
