@@ -13,8 +13,6 @@ layout: text
 
 Architectural Reviews within the Firefox organization fall into two categories: “Roadmap” and “Design”.
 
-Product Reviews are not within the scope of this process. This process is about architectural change, which should ultimately be in support of product features, but will generally have an effect on multiple product features. Architectural change can be growing new capabilities or in reducing large-scale technical debt.
-
 The function of a **Roadmap Review** is to decide if a thing should be done. The goal is to bring together a packet of data to inform a management decision to provide resources to make the thing happen. A Roadmap Review should happen early in the process so that build time isn’t wasted on a “No” decision, but so that enough information is available to management.
 
 A **Design Review** is to decide if the thing should be done in a particular way. The goal is to ensure that the problem space is understood well enough that a realistic bug breakdown can be made, that those working on the problem all agree on the challenge, and that work can be prioritized to hit the hardest parts of the problem first (in order to get early warning if the hard parts prove impossible or to inform schedule projections early).
