@@ -159,7 +159,7 @@ Describes how Etsy's architecture review process evolved. A solid write-up of th
 
 * https://www.kitchensoap.com/2017/08/12/multiple-perspectives-on-technical-problems-and-solutions/
 
-### Architecture Reviews - Grady Booch - 2010:
+### Architecture Reviews - Grady Booch - 2010
 
 A formal write-up from someone who spends a significant time in Architecture Reviews. I've not found the paper online, but the MP3 is an audio version of the paper (with bonus guitar-riff intro). This IBM process suffers from lack of attention to the social aspects, but is helpful in digging into the mechanics of the review itself.
 
