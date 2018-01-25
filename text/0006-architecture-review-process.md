@@ -61,7 +61,7 @@ The review meeting should be a discussion of the issues, but should avoid feelin
 
 The ideal review process scales well. The same basic system should work for a quick 2 person decision over the best way to design a certain feature, and for a critical organization-wide decision about a path to take. The term “team” is used above although we strongly recommend design reviews for smaller questions. If you feel yourself wondering if some design is best, it should be easy to perform a review.
 
-For particularly small reviews it is possible to merge a roadmap review and design review into a single review, in which case the question is both 'should we do this', and 'should we do it this way'. It is possible to conduct combined reviews where the total time for the review for all participants was 1 working day.
+For particularly small reviews it is possible to merge a roadmap review and design review into a single review, in which case the question is both 'should we do this', and 'should we do it this way'. It is possible to conduct combined reviews where the total time for the review for all participants is 1 working day.
 
 For both a Roadmap Review and a Design Review the goal is to hear perspectives that will lead to a better definition of a problem or solution, and better judgment about whether it should be solved or how to solve it.
 
@@ -112,7 +112,7 @@ In order to agree on the proposal, the reviewer and the team/technical lead or p
 
 * Establish vocabulary
 * Help the team “argue the right level” for the review
-* Identify stakeholders and domain experts — those Consulted
+* Identify the stakeholders and domain experts who will be consulted
 
 Subsequently, the team prepares a review packet detailing the problem space and their approach.
 
@@ -145,7 +145,7 @@ After the review, the reviewer and responsible decision makers should provide co
 
 ## Examples
 
-A number of reviews have been completed and can be used as a template for a successful architectural review. [XBL Removal](0007-xbl-design-review-packet.md) was the first example of a design review, [Sync and Storage](0008-sync-and-storage-review-packet.md) was the first roadmap review, however any of the documents with a title that includes "review" in [the text folder](..) could be used.
+A number of reviews have been completed and can be used as a template for a successful architectural review. [XBL Removal](0007-xbl-design-review-packet.md) was the first example of a design review, [Sync and Storage](0008-sync-and-storage-review-packet.md) was the first roadmap review, however any of the [documents on this website](..) with a title that includes "review" could be used.
 
 ## Additional Reading
 
