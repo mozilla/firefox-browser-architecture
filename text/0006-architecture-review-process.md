@@ -13,8 +13,6 @@ layout: text
 
 Architectural Reviews within the Firefox organization fall into two categories: “Roadmap” and “Design”.
 
-Product Reviews are not within the scope of this process. This process is about architectural change, which should ultimately be in support of product features, but will generally have an effect on multiple product features. Architectural change can be growing new capabilities or in reducing large-scale technical debt.
-
 The function of a **Roadmap Review** is to decide if a thing should be done. The goal is to bring together a packet of data to inform a management decision to provide resources to make the thing happen. A Roadmap Review should happen early in the process so that build time isn’t wasted on a “No” decision, but so that enough information is available to management.
 
 A **Design Review** is to decide if the thing should be done in a particular way. The goal is to ensure that the problem space is understood well enough that a realistic bug breakdown can be made, that those working on the problem all agree on the challenge, and that work can be prioritized to hit the hardest parts of the problem first (in order to get early warning if the hard parts prove impossible or to inform schedule projections early).
@@ -63,6 +61,8 @@ The review meeting should be a discussion of the issues, but should avoid feelin
 
 The ideal review process scales well. The same basic system should work for a quick 2 person decision over the best way to design a certain feature, and for a critical organization-wide decision about a path to take. The term “team” is used above although we strongly recommend design reviews for smaller questions. If you feel yourself wondering if some design is best, it should be easy to perform a review.
 
+For particularly small reviews it is possible to merge a roadmap review and design review into a single review, in which case the question is both 'should we do this', and 'should we do it this way'. It is possible to conduct combined reviews where the total time for the review for all participants is 1 working day.
+
 For both a Roadmap Review and a Design Review the goal is to hear perspectives that will lead to a better definition of a problem or solution, and better judgment about whether it should be solved or how to solve it.
 
 ## Rationale
@@ -83,8 +83,6 @@ For both a Roadmap Review and a Design Review the goal is to hear perspectives t
 The first two considerations define the goals of the review process and are two sides of the same coin.
 
 The audience of a Roadmap Review is those “up the chain” of decision makers and the audience of a Design Review is those running “down the chain” of implementors.
-
-In [RACI](https://en.wikipedia.org/wiki/Responsibility_assignment_matrix) terms, the team is Responsible, the reviewer is Accountable, other senior engineers or managers are Consulted and various others in the organization are Informed.
 
 A Roadmap Review should focus on:
 
@@ -114,7 +112,7 @@ In order to agree on the proposal, the reviewer and the team/technical lead or p
 
 * Establish vocabulary
 * Help the team “argue the right level” for the review
-* Identify stakeholders and domain experts — those Consulted, per RACI — in the organization
+* Identify the stakeholders and domain experts who will be consulted
 
 Subsequently, the team prepares a review packet detailing the problem space and their approach.
 
@@ -143,13 +141,11 @@ A project under review will be in one of the following states:
 
 Generally our review process focuses on projects in the “Roadmap” or “Design” stages. However a project in the “Execution” or “Landing” stage may need subsequent review to decide if the project is being done the correct way, or if it should be continued at all, so it may return to either of the “Roadmap” or “Design” phases.
 
-After the review, the reviewer and responsible decision makers should provide concrete recommendations and examples for the next teams to undergo the review process. The results should be disseminated as widely as possible, with the package documents and recommendation document archived. Some version of the decision should be publicly linked, so that it can be the decision of record, to which blog posts, mailing list posts, the message saying that the GitHub repository is obsolete, etc., can refer. The goal is to avoid critical technical and resourcing decisions being internally settled and only — later, begrudgingly — being made public on some mailing list. Or, per RACI, the goal is to broaden the set of those Informed.
+After the review, the reviewer and responsible decision makers should provide concrete recommendations and examples for the next teams to undergo the review process. The results should be disseminated as widely as possible, with the package documents and recommendation document archived. Some version of the decision should be publicly linked, so that it can be the decision of record, to which blog posts, mailing list posts, the message saying that the GitHub repository is obsolete, etc., can refer. The goal is to avoid critical technical and resourcing decisions being internally settled and only — later, begrudgingly — being made public on some mailing list.
 
 ## Examples
 
-The following reviews have been completed and can be used as a template for a successful architectural review.
-
-* [XBL Removal](https://mozilla.github.io/firefox-browser-architecture/text/0007-xbl-design-review-packet.html)
+A number of reviews have been completed and can be used as a template for a successful architectural review. [XBL Removal](0007-xbl-design-review-packet.md) was the first example of a design review, [Sync and Storage](0008-sync-and-storage-review-packet.md) was the first roadmap review, however any of the [documents on this website](..) with a title that includes "review" could be used.
 
 ## Additional Reading
 
@@ -163,7 +159,7 @@ Describes how Etsy's architecture review process evolved. A solid write-up of th
 
 * https://www.kitchensoap.com/2017/08/12/multiple-perspectives-on-technical-problems-and-solutions/
 
-### Architecture Reviews - Grady Booch - 2010:
+### Architecture Reviews - Grady Booch - 2010
 
 A formal write-up from someone who spends a significant time in Architecture Reviews. I've not found the paper online, but the MP3 is an audio version of the paper (with bonus guitar-riff intro). This IBM process suffers from lack of attention to the social aspects, but is helpful in digging into the mechanics of the review itself.
 
