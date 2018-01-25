@@ -145,7 +145,7 @@ After the review, the reviewer and responsible decision makers should provide co
 
 ## Examples
 
-A number of reviews have been completed and can be used as a template for a successful architectural review. [XBL Removal](0007-xbl-design-review-packet.md) was the first example of a design review, [Sync and Storage](0008-sync-and-storage-review-packet.md) was the first roadmap review, however any of the [documents on this website](..) with a title that includes "review" could be used.
+A number of reviews have been completed and can be used as a template for a successful architectural review. [XBL Removal](0007-xbl-design-review-packet.md) was the first example of a design review, [Sync and Storage](0008-sync-and-storage-review-packet.md) was the first roadmap review, however any of the documents on this website with a title that includes "review" could be used.
 
 ## Additional Reading
 
