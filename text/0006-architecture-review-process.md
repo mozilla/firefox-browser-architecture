@@ -55,6 +55,7 @@ For both a Roadmap Review and a Design Review the **timetable** is as follows:
       - Short opening statement by the team on the current state of play
       - Discussion of Questions and Answers (see 3. above)
       - A step back to discuss if the proposal is right in the wider context
+    * A lightweight review might not need the input of others, and ultimately, might not even need a specific review meeting.
 
 The review meeting should be a discussion of the issues, but should avoid feeling pressured to make a decision. The goal is to understand the issues raised by the question(s) and the background from the review packet, and to add to it wisdom from the people at the review. The meeting may decide to alter the questions and undergo a subsequent review. We should be very open about conversations that happen after the review meeting.
 
