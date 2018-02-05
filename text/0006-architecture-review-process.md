@@ -11,7 +11,7 @@ layout: text
 
 ## Introduction
 
-Architectural Reviews within the Firefox organization fall into two categories: “Roadmap” and “Design”.
+This process targets Architectural Reviews in two categories: “Roadmap” and “Design”. It doesn't tackle how to review in-progress projects to see if they should continue.
 
 The function of a **Roadmap Review** is to decide if a thing should be done. The goal is to bring together a packet of data to inform a management decision to provide resources to make the thing happen. A Roadmap Review should happen early in the process so that build time isn’t wasted on a “No” decision, but so that enough information is available to management.
 
@@ -23,16 +23,15 @@ For both a Roadmap Review and a Design Review the **timetable** is as follows:
 
 1. The team should set the stage:
     * Summarize in one or two sentences the proposal to be reviewed. This should be agreed between the team asking for review and the reviewer.
-    * Find a **reviewer**:
+    * Find a **reviewer** (See “Outputs and Audience” below for the rationale):
       - For a Roadmap Review this will be the least senior manager with the ability to address the problem in its entirety.
       - For a Design Review this will be an experienced engineer in the problem domain outside of the team willing to put time into the problem. As engineers don’t review their own code they shouldn’t review their own designs. The principle is to get the most informed and least biased feedback possible.
     * Optionally, for larger reviews, find someone to **chair** the review. This can facilitate the process (i.e. scheduling the meeting, managing the clock, ensuring minutes are taken, etc.) and enables the reviewer to concentrate on the review itself. The rest of this document uses 'chair' for the administrative role. For smaller reviews the reviewer also does the tasks of the chair.
 
-2. The team produces a **Review Packet** designed to document the proposal identified in step 1. The production of the Review Packet is expected to be collaborative and iterative to ensure that the review focuses on the key issues so the team presents its best case. This is particularly true of a Roadmap Review where the consequences of the review are likely to be more significant.
-The Review Packet includes:
-    * A lay summary of the problem space which is focused on defining a shared language and identifying the key forces behind the problem
+2. The team should produce a **Review Packet** designed to document the proposal identified in step 1. The Review Packet includes:
+    * A lay summary of the problem space which is focused on defining a shared language and identifying the key forces behind the problem.
     * A list of the groups directly affected by the proposal to ensure that the review meeting includes representatives from those groups.
-    * A vision of what the project will achieve on completion
+    * A vision of what the project will achieve on completion.
     * A brief that explains what the team is proposing. This should read more like an encyclopedia entry than a marketing document. The audience is the people in the review; i.e. this should attempt to plug organizational documentation holes. The documentation process should not be more onerous than is required for the review. The brief should identify:
       - the architecture being proposed
       - the non-functional requirements, like accessibility, performance, security, and stability
@@ -41,44 +40,38 @@ The Review Packet includes:
       - how the proposal handles these scenarios
       - what review and discussion of the proposed architecture has already happened (and with whom)
     * A competitive analysis suggesting alternatives, costs, and opportunities
+    * Input by representatives from the affected groups. The team is expected to listen to this input and update the review packet based on the input, but it is likely that not all the questions or comments can be answered before the review.
 
-3. The reviewer creates a list of questions to be discussed during the review. These questions should be:
+3. The reviewer creates a list of questions to be discussed during the review, possibly from the comments made in step 2. These questions should be:
     * Open-ended
     * Made available to the the team prior to the review so they can prepare answers
 
 4. The chair convenes a review meeting. The discussions of this meeting should be carefully minuted.
     * The meeting should have a limited attendance to avoid a sprawling unfocussed meeting, but it should include:
       - The team making the proposal
-      - Others who will provide valuable input, taking care to:
+      - Representatives from the affected groups, taking care to:
         + Select a full range of perspectives
         + Avoid “stacking the deck” with too many people that think the same way
     * A suggested agenda for the review meeting:
       - Short opening statement by the team on the current state of play
       - Discussion of Questions and Answers (see 3. above)
       - A step back to discuss if the proposal is right in the wider context
+    * A lightweight review might not need the input of others, and ultimately, might not even need a specific review meeting.
 
-The review meeting should be a discussion of the issues, but should avoid feeling pressured to make a decision. The goal is to understand the issues raised by the question(s) and the background from the review packet, and to add to it wisdom from the people at the review. The meeting may decide to alter the questions and undergo a subsequent review. We should be very open about conversations that happen after the review meeting.
+The review meeting should be a discussion of the issues, but should avoid feeling pressured to make a decision. The goal is to understand the issues raised by the question(s) and the background from the review packet, and to add to it wisdom from the people at the review.
+
+A generally positive review is likely to have a number of action items which the team should respond to before the review is complete. The reviewer is responsible for enumerating the action items, validating the answers and ultimately deciding the outcome of the review.
+
+A more negative review may decide to alter the questions, undergo a subsequent review or drop the subject entirely. It is a goal of the process that we discover fatal flaws as early on in the process as possible.
 
 The ideal review process scales well. The same basic system should work for a quick 2 person decision over the best way to design a certain feature, and for a critical organization-wide decision about a path to take. The term “team” is used above although we strongly recommend design reviews for smaller questions. If you feel yourself wondering if some design is best, it should be easy to perform a review.
 
 For particularly small reviews it is possible to merge a roadmap review and design review into a single review, in which case the question is both 'should we do this', and 'should we do it this way'. It is possible to conduct combined reviews where the total time for the review for all participants is 1 working day.
 
-For both a Roadmap Review and a Design Review the goal is to hear perspectives that will lead to a better definition of a problem or solution, and better judgment about whether it should be solved or how to solve it.
+The results of the review (including review packet and reviewer summary) should be published and communicated widely, with the review packet and results archived. Some version of the decision should be publicly linkable, so that it can be the decision of record, to which blog posts, mailing list posts, can refer.
 
-## Rationale
 
-### Key considerations
-
-* What are the desired **outputs** of the review process?
-* Which **audience** is intended to consume the outputs of the review process?
-* What committee **structure** is best positioned to deliver those outputs?
-* What are the **inputs** that the committee should evaluate?
-* What **process** will most encourage participants to look at review as an asset rather than an obstacle?
-* What kinds of **conduct** are necessary in order for the process to be inclusive and constructive?
-* What size and **maturity** should projects achieve before undergoing review?
-* When should review results be **disseminated**?
-
-### Outputs and Audience
+## Rationale: Outputs and Audience
 
 The first two considerations define the goals of the review process and are two sides of the same coin.
 
@@ -102,46 +95,6 @@ A Design Review should focus on:
 
 The key outcome for middle management is to understand the value proposition and the path to success. The key outcome for engineers is firstly to understand the design constraints and the tradeoffs between them, which is important to avoid unnecessary re-work when implementation reality causes a re-think. Secondly, to provide a proposal detailed enough to begin an initial breakdown of engineering work for the proposal (although the work implied by the proposal should not be filed prior to the completion of the review).
 
-### Structure and Inputs
-
-The second two considerations shape how the review process actually happens.
-
-The reviewer and the team frame the proposal at the start of the process to ensure agreement on what should be tested. The reviewer is accountable for summarizing the response to the proposal following the review process.
-
-In order to agree on the proposal, the reviewer and the team/technical lead or principals will generally have an initial meeting. This meeting should be as small as possible and is intended to:
-
-* Establish vocabulary
-* Help the team “argue the right level” for the review
-* Identify the stakeholders and domain experts who will be consulted
-
-Subsequently, the team prepares a review packet detailing the problem space and their approach.
-
-The goal is to have the reviewer and the team establish some shared reality informally, and then to have the team document this and explain how their proposal would address the problem.
-
-The reviewer then evaluates and refines the team’s document with the assistance of domain experts and the identified stakeholders. Hopefully the consulted stakeholders concur with the framing of the problem and are aligned behind the architectural approach, but perhaps they are not. The reviewer collects such concerns and presents them. This should be a collaborative process whereby the architectural review functions to document a problem and a proposed solution, in which case the reviewer can solicit response from the team.
-
-### Process and Conduct
-
-Involving the team and the reviewer informally and subsequently sharing ownership of a document is designed to seed a collaborative process. A particular benefit is avoiding drift between the proposal and the focus of the review.
-
-An Architecture Review process can be formally mandated. This may work in environments with a large degree of formality and process. This isn't how Mozilla works. For an Architecture Review process to be successful at Mozilla it must be beneficial to the team undergoing review.
-
-The primary informal output of a review should be learning. It is expected that go/no-go decisions will be the result of additional learning rather than the team seeing a 'no-go' as something that needs fighting. Imposed decisions may be required, but learning is a preferred outcome.
-
-### Maturity and Dissemination
-
-The final two considerations shape what is reviewed and how the review concludes.
-
-A project under review will be in one of the following states:
-
-* The “Roadmap” stage: the team has a proposal, and wants broader buy-in to justify investment in the problem space
-* The “Design” stage: the problem space is considered valuable, and the team wants to commit to one path through the solution space
-* The “Execution” stage: the team is actively pursuing a solution
-* The “Landing” stage: the team is verifying the solution meets expectations
-
-Generally our review process focuses on projects in the “Roadmap” or “Design” stages. However a project in the “Execution” or “Landing” stage may need subsequent review to decide if the project is being done the correct way, or if it should be continued at all, so it may return to either of the “Roadmap” or “Design” phases.
-
-After the review, the reviewer and responsible decision makers should provide concrete recommendations and examples for the next teams to undergo the review process. The results should be disseminated as widely as possible, with the package documents and recommendation document archived. Some version of the decision should be publicly linked, so that it can be the decision of record, to which blog posts, mailing list posts, the message saying that the GitHub repository is obsolete, etc., can refer. The goal is to avoid critical technical and resourcing decisions being internally settled and only — later, begrudgingly — being made public on some mailing list.
 
 ## Examples
 
