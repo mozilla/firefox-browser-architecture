@@ -40,9 +40,9 @@ Now let's create our standalone NDKs. There is no need to be inside the `NDK` di
 
 ```
 mkdir NDK
-${NDK_HOME}/build/tools/make_standalone_toolchain.py --api 21 --arch arm64 --install-dir NDK/arm64
-${NDK_HOME}/build/tools/make_standalone_toolchain.py --api 14 --arch arm --install-dir NDK/arm
-${NDK_HOME}/build/tools/make_standalone_toolchain.py --api 14 --arch x86 --install-dir NDK/x86
+${NDK_HOME}/build/tools/make_standalone_toolchain.py --api 26 --arch arm64 --install-dir NDK/arm64
+${NDK_HOME}/build/tools/make_standalone_toolchain.py --api 26 --arch arm --install-dir NDK/arm
+${NDK_HOME}/build/tools/make_standalone_toolchain.py --api 26 --arch x86 --install-dir NDK/x86
 ```
 
 Create a new file, `cargo-config.toml`. This file will tell cargo where to look for the NDKs during cross compilation. Add the following content to the file, remembering to replace instances of `<project path>` with the path to your project directory.
