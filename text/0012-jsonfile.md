@@ -20,14 +20,15 @@ This approach is well suited to data that:
 Advantages of this approach:
 - It's relatively simple, with serialization and deserialization being the only steps.
 - Because the file is rewritten frequently, there is some hard-to-measure resilience to gradual file corruption.
-- The file on disk is human-readable and editable, which is convenient for development, test, and support.
-- The in-memory data can be queried and manipulated synchronously.
+- The file on disk is — unless compressed — human-readable and editable, which is convenient for development, test, and support.
+- Automatic opt-in whole-file compression is offered by JSONFile.
+- The in-memory data can be queried and manipulated synchronously and quickly, assuming the representation is a good match for retrieval patterns.
 - Development is 'natural' for front-end developers — get things working with only in-memory data, then add persistence on top.
 
 Disadvantages:
 - Versioning is often an afterthought: engineers rarely think to version in-memory data formats.
 - Change tracking is almost always an afterthought, thanks to the 'natural' development process: adding syncing later becomes difficult.
-- Users can edit the file on disk, which can result in persistent state that was never created by the component's own logic.
+- Users feel relatively empowered to edit readable files on disk, which can result in persistent state that was never created by the component's own logic. The use of compressed formats makes this less likely.
 - Frequent writes will cause the entire file to be written to disk repeatedly, [which causes complaints about SSD impact](https://bugzilla.mozilla.org/show_bug.cgi?id=1304389).
 - The entire file typically needs to be read into memory to be used, which increases memory footprint and can impact startup time.
 - Writes at shutdown harm the user experience and don't happen during a crash.
@@ -47,14 +48,13 @@ Disadvantages:
 - Synchronization of data stored in this way takes some careful thought. Syncs typically take hundreds of milliseconds or more, and involve asynchronous network operations, which makes exclusive synchronous access to the in-memory data between reads and writes infeasible.
 - There is a tension between durability (that is: writes that complete are permanent) and performance. We typically choose not to flush the file immediately and synchronously after every change, but not doing so leaves a window in which a crash would cause data loss. By default, that window is 1.5 seconds, plus the time needed to write and atomically switch the files. This forces careful consumers to manually flush if they want their writes to stick, which is a bad pattern.
 - In-memory objects lack the sophistication of most databases. This leads to front-end features building their own [simple query engines](https://dxr.mozilla.org/mozilla-central/source/toolkit/components/passwordmgr/storage-json.js#296) for [finding records by linear search](https://dxr.mozilla.org/mozilla-central/source/browser/extensions/formautofill/FormAutofillStorage.jsm#1081).
-- Similarly, these stores must reinvent their own:
+- Similarly, these stores must reinvent (or contribute to JSONFile) their own:
   - Versioning and upgrade logic.
   - Validation and schema checking.
   - Concurrent access patterns.
   - Write coalescing/async update patterns.
-  - Tooling, if any.
+  - Tooling, if existing general-purpose JSON tools (*e.g.*, `jq`) are not sufficient.
   - Backup, if any.
-  - [Compression](https://bugzilla.mozilla.org/show_bug.cgi?id=1304389#c45), if any.
   - Indexing, if any.
   - Datatype serialization (*e.g.*, timestamps).
 - Finally, the use of `JSONFile.jsm` is intimately linked to Gecko; it's a poor choice for code that will later need to be deployed on other platforms.
