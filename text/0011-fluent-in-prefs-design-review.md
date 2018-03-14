@@ -1,3 +1,8 @@
+---
+title: Fluent in Prefs Design Review
+layout: text
+---
+
 # Fluent in Prefs Design Review
 
 ## Introduction
