@@ -27,6 +27,7 @@ This is a list of our findings that we're reasonably happy with so far.
 * [JavaScript Type Safety Systems](text/0009-type-safety-systems.md) are some conclusions of an investigation into the use of JavaScript type safety systems.
 * [Firefox Data Stores Documentation](text/0010-firefox-data-stores.md) documents the existing data stores across all current Firefox platforms.
 * [Fluent in Prefs Design Review](text/0011-fluent-in-prefs-design-review.md) describes the lightweight design review for Fluent in Prefs.
+* [A brief analysis of JSON file-backed storage](text/0012-jsonfile.md) outlines some of the pros and cons of using a flat file (particularly via `JSONFile.jsm`) to store data in Firefox.
 
 ## Posts
 
