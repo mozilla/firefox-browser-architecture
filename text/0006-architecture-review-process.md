@@ -40,7 +40,7 @@ For both a Roadmap Review and a Design Review the **timetable** is as follows:
       - how the proposal handles these scenarios
       - what review and discussion of the proposed architecture has already happened (and with whom)
     * A competitive analysis suggesting alternatives, costs, and opportunities
-    * Input by representatives from the affected groups. The team is expected to listen to this input and update the review packet based on the input, but it is likely that not all the questions or comments can be answered before the review.
+    * Input by representatives from the affected groups. The team may update the review packet based on this input but is not required to answer all questions and address all comments before the review.
 
 3. The reviewer creates a list of questions to be discussed during the review, possibly from the comments made in step 2. These questions should be:
     * Open-ended
