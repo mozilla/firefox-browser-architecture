@@ -64,12 +64,13 @@ A generally positive review is likely to have a number of action items which the
 
 A more negative review may decide to alter the questions, undergo a subsequent review or drop the subject entirely. It is a goal of the process that we discover fatal flaws as early on in the process as possible.
 
+The results of the review (including review packet and reviewer summary) should be published and communicated widely, with the review packet and results archived. Some version of the decision should be publicly linkable, so that it can be the decision of record, to which blog posts, mailing list posts, can refer.
+
+## Review Scaling: Large and Small Reviews
+
 The ideal review process scales well. The same basic system should work for a quick 2 person decision over the best way to design a certain feature, and for a critical organization-wide decision about a path to take. The term “team” is used above although we strongly recommend design reviews for smaller questions. If you feel yourself wondering if some design is best, it should be easy to perform a review.
 
 For particularly small reviews it is possible to merge a roadmap review and design review into a single review, in which case the question is both 'should we do this', and 'should we do it this way'. It is possible to conduct combined reviews where the total time for the review for all participants is 1 working day.
-
-The results of the review (including review packet and reviewer summary) should be published and communicated widely, with the review packet and results archived. Some version of the decision should be publicly linkable, so that it can be the decision of record, to which blog posts, mailing list posts, can refer.
-
 
 ## Rationale: Outputs and Audience
 
@@ -94,7 +95,6 @@ A Design Review should focus on:
 * Resource allocation
 
 The key outcome for middle management is to understand the value proposition and the path to success. The key outcome for engineers is firstly to understand the design constraints and the tradeoffs between them, which is important to avoid unnecessary re-work when implementation reality causes a re-think. Secondly, to provide a proposal detailed enough to begin an initial breakdown of engineering work for the proposal (although the work implied by the proposal should not be filed prior to the completion of the review).
-
 
 ## Examples
 
