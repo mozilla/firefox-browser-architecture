@@ -30,6 +30,7 @@ This is a list of our findings that we're reasonably happy with so far.
 * [A brief analysis of JSON file-backed storage](text/0012-jsonfile.md) outlines some of the pros and cons of using a flat file (particularly via `JSONFile.jsm`) to store data in Firefox.
 * [Process Isolation in Firefox](text/0012-process-isolation-in-firefox.md) is a WIP evaluation of how far we can push process isolation to improve security and stability.
 * [IPC Security Models and Status](text/0013-ipc-security-models-and-status.md) is an audit of our current IPC status.
+* [XUL Overlay Removal Review Packet](text/0014-xul-overlay-removal-review-packet.md) is the packet that we prepared for the architectural design review for XUL Overlay removal.
 
 ## Posts
 
