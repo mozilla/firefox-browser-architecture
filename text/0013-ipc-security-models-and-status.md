@@ -1,3 +1,8 @@
+---
+title: IPC Security Models and Status
+layout: text
+---
+
 # IPC Security Models and Status
 
 Randell Jesup

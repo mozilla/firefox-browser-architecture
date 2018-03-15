@@ -1,12 +1,17 @@
+---
+title: Firefox Data Stores
+layout: text
+---
 
-# Introduction
+# Firefox Data Stores
+
+## Introduction
 
 There are a large number of data stores being used to hold data across all Firefox instances and platforms. There is currently nowhere that documents all these data stores and how they share information between them. We have 3 platforms, desktop, Android and iOS and each of these platforms shares data with the others. But not all the information is synced completely across all platforms, and the data itself is not stored in the same way everywhere. When starting to think about how we might provide a holistic user data solution for Mozilla, it is important to understand the scope of the problem and the specifics of the data that is being handled. 
 
 We therefore need to look at all of the data stores that we are currently using and document their purpose, structure, the kind of data that they hold and how they share that data.
 
-
-# Summary
+## Summary
 
 The extensive documentation can be found in the [Firefox Data Stores](https://github.com/mozilla/firefox-data-store-docs) repository.
 

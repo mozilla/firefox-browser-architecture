@@ -1,3 +1,8 @@
+---
+title: A brief analysis of JSON file-backed storage
+layout: text
+---
+
 # A brief analysis of JSON file-backed storage
 
 Several components in Firefox — including libpref, XULStore, autofill, and logins — follow a general pattern:

@@ -1,11 +1,16 @@
-Process Isolation in Firefox
+---
+title: Process Isolation in Firefox
+layout: text
+---
+
+# Process Isolation in Firefox
 
 Randell Jesup, Mozilla Browser Architecture team
 
 ## NOTE: this document is a Work in Progress!
 
 
-# OVERVIEW
+## Overview
 
 We’ve recently moved a number of parts of Firefox into separate processes (e10s, multi-e10s, GPU process, compositor, WebExtensions process, GMP).  This has produced some serious improvements in both security (sandboxing content, codecs) and stability (restarting GPU process when a GPU driver crashes, etc).  This project is to evaluate how much further we can push process isolation to further improve these things.
 
