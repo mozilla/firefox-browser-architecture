@@ -58,7 +58,7 @@ For both a Roadmap Review and a Design Review the **timetable** is as follows:
       - A step back to discuss if the proposal is right in the wider context
     * A lightweight review might not need the input of others, and ultimately, might not even need a specific review meeting.
 
-The review meeting should be a discussion of the issues, but should avoid feeling pressured to make a decision. The goal is to understand the issues raised by the question(s) and the background from the review packet, and to add to it wisdom from the people at the review.
+The review meeting should be a discussion of the issues. Reviewers don't need to make a decision at the meeting. The goal is to understand the issues raised by the question(s) and the background from the review packet, and to add to it wisdom from the people at the review.
 
 A generally positive review is likely to have a number of action items which the team should respond to before the review is complete. The reviewer is responsible for enumerating the action items, validating the answers and ultimately deciding the outcome of the review.
 
