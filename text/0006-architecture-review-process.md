@@ -43,7 +43,7 @@ For both a Roadmap Review and a Design Review the **timetable** is as follows:
     * Input by representatives from the affected groups. The team may update the review packet based on this input but is not required to answer all questions and address all comments before the review.
 
 3. The reviewer creates a list of questions to be discussed during the review, possibly from the comments made in step 2. These questions should be:
-    * Open-ended
+    * Designed to foster productive analysis and discussion
     * Made available to the the team prior to the review so they can prepare answers
 
 4. The chair convenes a review meeting. The discussions of this meeting should be carefully minuted.
