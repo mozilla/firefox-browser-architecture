@@ -20,7 +20,7 @@ All of the C++ code that supports the complex logic of loading and merging overl
 XUL Maintainers (Neil Deakin, Gijs Kruitbosch), Firefox Frontend (Dave Townsend)
 
 ## Brief
-A detailed review of XUL overlay usage shows some common patterns and gives insight into how they can be removed. In general, the uses fall into four categories: unused, used once, used multiple times for simple templating, and used multiple times in a more complicated manor.
+A detailed review of XUL overlay usage shows some common patterns and gives insight into how they can be removed. In general, the uses fall into four categories: unused, used once, used multiple times for simple templating, and used multiple times in a more complicated manner.
 
 ### Unused
 
@@ -38,6 +38,6 @@ These can be included via the preprocessor.
 
 These are more tricky and will have to be replaced case by case. A few possible approaches:
 
-* Preprocessor include - break up the overlay into a few include files. This has the downside that the master document would need to do a number of includes to get all the various     files (dtd, css, js, xml).
+* Preprocessor include - break up the overlay into a few include files. This has the downside that the master document would need to do a number of includes to get all the various files (dtd, css, js, xml).
 * Custom element - use the new custom elements. The master document would need to includes a JS file that defines the element.
 * JS - move element creation to JS
