@@ -16,13 +16,56 @@ Open Android Studio. From the toolbar, go to `Android Studio > Preferences > App
     * CMake
     * LLDB
 
+Once the NDK and associated tools have been installed, we need to set a few environment variables, first for the SDK path and the second for the NDK path. Set the following envvars:
+
+```
+export ANDROID_HOME=/Users/$USER/Library/Android/sdk
+export NDK_HOME=$ANDROID_HOME/ndk-bundle
+```
+
 If you do not already have Rust installed, we need to do this now. For this we will be using [rustup](https://www.rustup.rs/). `rustup` installs Rust from the official release channels and enables you to easily switch between different release versions. It will be useful to you for all your future Rust development, not just here. `rustup` can also be used in conjunction with `HomeBrew`.
 
 ```
 curl https://sh.rustup.rs -sSf | sh
 ```
 
-**_Edit: This used to be a lot more complicated. We no longer have to build our own standalone NDK and manually link them - now we just have to add the architectures to `rustup`. Thanks progress!_**
+The next step is to create standalone versions of the NDK for us to compile against. We need to do this for each of the architectures we want to compile against. We will be using the `make_standalone_toolchain.py` script inside the main Android NDK in order to do this. First create a directory for our project.
+
+```
+mkdir greetings
+cd greetings
+```
+
+Now let's create our standalone NDKs. There is no need to be inside the `NDK` directory once you have created it to do this.
+
+```
+mkdir NDK
+${NDK_HOME}/build/tools/make_standalone_toolchain.py --api 26 --arch arm64 --install-dir NDK/arm64
+${NDK_HOME}/build/tools/make_standalone_toolchain.py --api 26 --arch arm --install-dir NDK/arm
+${NDK_HOME}/build/tools/make_standalone_toolchain.py --api 26 --arch x86 --install-dir NDK/x86
+```
+
+Create a new file, `cargo-config.toml`. This file will tell cargo where to look for the NDKs during cross compilation. Add the following content to the file, remembering to replace instances of `<project path>` with the path to your project directory.
+
+```
+[target.aarch64-linux-android]
+ar = "<project path>/greetings/NDK/arm64/bin/aarch64-linux-android-ar"
+linker = "<project path>/greetings/NDK/arm64/bin/aarch64-linux-android-clang"
+
+[target.armv7-linux-androideabi]
+ar = "<project path>/greetings/NDK/arm/bin/arm-linux-androideabi-ar"
+linker = "<project path>/greetings/NDK/arm/bin/arm-linux-androideabi-clang"
+
+[target.i686-linux-android]
+ar = "<project path>/greetings/NDK/x86/bin/i686-linux-android-ar"
+linker = "<project path>/greetings/NDK/x86/bin/i686-linux-android-clang"
+```
+
+In order for `cargo` to see our new SDK's we need to copy this config file to our `.cargo` directory like this:
+
+```
+cp cargo-config.toml ~/.cargo/config
+```
 
 Let's go ahead and add our newly created Android architectures to `rustup` so we can use them during cross compilation:
 
@@ -30,14 +73,7 @@ Let's go ahead and add our newly created Android architectures to `rustup` so we
 rustup target add aarch64-linux-android armv7-linux-androideabi i686-linux-android
 ```
 
-Now we're all set up and we're ready to start. First, create a directory for our project.
-
-```
-mkdir greetings
-cd greetings
-```
-
-Let's create the `lib` directory. If you've already created a Rust project from following the iOS post, you don't need to do it again.
+Now we're all set up and we're ready to start. Let's create the `lib` directory. If you've already created a Rust project from following the iOS post, you don't need to do it again.
 
 ```
 cargo new cargo
