@@ -118,7 +118,11 @@ After we've linked out Rust library, we also need to add the `libjnidispatch.so`
 
 As with iOS, when we had to create a C header file to link our iOS code with our Rust library, when using JNA we need to create a Java Interface to do the same thing.
 
-Under your `com.mozilla.greetings` in Android Studio, create a new Java Interface called JNA.java.
+In the project explorer on the left hand side of the studio window, ensure that `app > java > <domain>.greetings` is highlighted then go to `File > New > Java Class`. Name your class `JNA`, select Interface from the `Kind` dropdown and click `OK`.
+
+![Create new interface](assets/2018-05-23-rust-on-android-JNA/jna-interface.png)
+
+Add the following code to the inteface. Your interface needs to extend `com.sun.jna.Library`, which is the JNA base interface that derives all native library definitions from the instance of your library. 
 
 ```
 package com.mozilla.greetings;
@@ -135,9 +139,9 @@ public interface JNA extends Library {
 }
 ```
 
-Library is the JNA base interface that derives all native library definitions from the instance of your library. In is inside this class that we will declare the headers that will link to our Rust library. We have only one external function to declare here. The `rust_greeting` function.
+Here we are declaring that our library is called `greetings`. You will remember that our library is actually called `libgreetings.so`. When Java loads native libraries it will automatically prepend `lib` and append `.so` onto whatevery you call the library during your import. If you were to enter `libgreetings.so` here, the library loader will look for a file called `liblibgreetings.so.so` so be careful that you don't rename your library to something else.
 
-Add the following interface declaration to your `JNA` interface.
+In is inside this interface that we will declare the headers that will link to our Rust library. We have only one external function to declare here, the `rust_greeting` function. Add the following interface declaration to your `JNA` interface.
 
 ```
 String rust_greeting(String pattern);
