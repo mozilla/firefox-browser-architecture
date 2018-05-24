@@ -11,6 +11,8 @@ In our previous post we built a Rust library, and linked to it on [Android using
 
 With JNI, for every `extern "C"` function that we created for our FFI, we had to create a mirror function in Rust for JNI to access. This involved some complicated function name construction and forced us to duplicate large chunks of code. JNA does away with all of that. You create a single interface that declares your FFI functions in Java and that's about it. It removes a large chunk of the headache and it is what we have moved to using here at Mozilla for our Android FFI.
 
+There is a small performance cost when using JNA over JNI. Because JNI statically hard codes type information at compile time, while JNA maps type information dynamically. The call overhead is on the order of hundreds of microseconds, so unless your application is highly performance sensitive, it is unlikely that the lower performance of JNA will be much of a problem. Please visit the [JNA FAQ](https://github.com/java-native-access/jna/blob/master/www/FrequentlyAskedQuestions.md#how-does-jna-performance-compare-to-custom-jni) for more information on JNA vs JNI performance.  
+
 # Getting set up.
 
 Follow the instructions in [our previous post](https://mozilla.github.io/firefox-browser-architecture/experiments/2017-09-21-rust-on-android.html) for building and creating your own standalone toolchains and linking them to Rustup. Once you have your environment set up, head back here for what to do next.
@@ -19,14 +21,19 @@ Follow the instructions in [our previous post](https://mozilla.github.io/firefox
 
 Now we're all set up and we're ready to start. Let's create the `lib` directory. If you've already created a Rust project from following either or our previous posts, you don't need to do it again.
 
+
+First create a directory for our project.
+
 ```
-cargo new cargo
+mkdir greetings
+cd greetings
+cargo new rust --lib
 mkdir android
 ```
 
-`cargo new cargo` sets up a brand new Rust project with its default files and directories in a directory called `rust`. The name of the directory is not important. In this directory is a file called `Cargo.toml`, which is the package manager descriptor file, and there is be a subdirectory, `src`, which contains a file called `lib.rs`. This will contain the Rust code that we will be executing.
+`cargo new rust` sets up a brand new Rust project with its default files and directories in a directory called `rust`. The name of the directory is not important. In this directory is a file called `Cargo.toml`, which is the package manager descriptor file, and there is a subdirectory, `src`, which contains a file called `lib.rs`. This will contain the Rust code that we will be executing.
 
-Our Rust project here is a super simple Hello World library. It contains a function `rust_greeting` that takes a string argument and return a greeting including that argument. Therefore, if the argument is "world", the returned string is "Hello world".
+Our Rust project here is a super simple Hello World library. It contains a function `rust_greeting` that takes a string argument and returns a greeting including that argument. Therefore, if the argument is "world", the returned string is "Hello world".
 
 Open `cargo/src/lib.rs` and enter the following code.
 
@@ -61,7 +68,7 @@ In order to build our library, we need to tell the compiler what type of a libra
 crate-type = ["dylib"]
 ```
 
-We are now ready to build our libraries. Unlike with iOS, there is no handy universal Android library that we can make so we have to create one for each of our target architectures. We can then create symlinks to them from the Android project. You will need to use absolute paths to your libraries here, not relative ones, otherwise Android Studio will not be able to follow the link. Navigate to your `cargo` directory and run the following commands:
+We are now ready to build our libraries. Unlike with iOS, there is no handy universal Android library that we can make so we have to create one for each of our target architectures. We can then create symlinks to them from the Android project. Navigate to your `cargo` directory and run the following commands:
 
 ```
 cargo build --target aarch64-linux-android --release
@@ -75,7 +82,7 @@ Open Android Studio and select `Start a New Android Project` from the options.
 
 ![Create new Android project](assets/2017-09-21-rust-on-android/new-project.png)
 
-On the next screen, type a project name of `Greetings` into the `Application name` field, choose your `Company domain` and select the `android` directory we created earlier as the `Project location`. This will create your Android project inside `greetings/android/Greetings`. Click `Next`.
+On the next screen, type a project name of `Greetings` into the `Application name` field, choose your `Company domain` and navigate to the `android` directory we created earlier as the `Project location`. Before selecting the location, click `New Folder`. Name this new folder `Greetings`. Then select `Open` to set your `Project location`. This will create your Android project inside `greetings/android/Greetings`. Click `Next`.
 
 ![Name project](assets/2017-09-21-rust-on-android/name-project.png)
 
@@ -91,12 +98,12 @@ Name your Activity and layout on the following screen, calling the activity `Gre
 
 ![Name activity](assets/2017-09-21-rust-on-android/customize-activity.png)
 
-We now have a build Rust library and an Android project. We now need to link the two. First, we have to add JNA to our project. Open your applications `build.gradle` file and add the following to the `dependencies` block. When prompted, resync gradle.
+We now have a build Rust library and an Android project. We now need to link the two. First, we have to add JNA to our project. Open your application's `build.gradle` file and add the following to the `dependencies` block. When prompted, resync gradle.
 
 ```
 implementation 'net.java.dev.jna:jna:4.5.0'
 ```
-Now, we have to create directories in which to place our Rust library. When we built our library, we created a single `.so` file for each architecture we cross compiled for. We now need to create a subdirectory for each of these architectures inside a special directory called `jniLibs`. Android knows to look for them here. Once those directories are created, we can create a symlink to ensure that the Android Studio version of the libraries are always linking to the most recently built version.
+Now, we have to create directories in which to place our Rust library. When we built our library, we created a single `.so` file for each architecture we cross compiled for. We now need to create a subdirectory for each of these architectures inside a special directory called `jniLibs`. Android knows to look for them here. Once those directories are created, we can create a symlink to ensure that the Android Studio version of the libraries are always linking to the most recently built version. You will need to use absolute paths to your libraries here, not relative ones, otherwise Android Studio will not be able to follow the link. 
 
 ```
 cd ../android/Greetings/app/src/main
@@ -139,9 +146,9 @@ public interface JNA extends Library {
 }
 ```
 
-Here we are declaring that our library is called `greetings`. You will remember that our library is actually called `libgreetings.so`. When Java loads native libraries it will automatically prepend `lib` and append `.so` onto whatevery you call the library during your import. If you were to enter `libgreetings.so` here, the library loader will look for a file called `liblibgreetings.so.so` so be careful that you don't rename your library to something else.
+Here we are declaring that our library is called `greetings`. You will remember that our library is actually called `libgreetings.so`. When Java loads native libraries it will automatically prepend `lib` and append `.so` onto whatever you call the library during your import. If you were to enter `libgreetings.so` here, the library loader will look for a file called `liblibgreetings.so.so` so be careful that you don't rename your library to something else.
 
-In is inside this interface that we will declare the headers that will link to our Rust library. We have only one external function to declare here, the `rust_greeting` function. Add the following interface declaration to your `JNA` interface.
+It is inside this interface that we will declare the headers that will link to our Rust library. We have only one external function to declare here, the `rust_greeting` function. Add the following interface declaration to your `JNA` interface.
 
 ```
 String rust_greeting(String pattern);
@@ -150,7 +157,7 @@ String rust_greeting(String pattern);
 That's it. We can now create some code that will call it.
 
 
-As with iOS, we're going to create a wrapper class to wrap the JNA binding and ensure that we have a more ergonmic Java API. In the project explorer on the left hand side of the studio window, ensure that `app > java > <domain>.greetings` is highlighted then go to `File > New > Java Class`. Name your class `RustGreetings` and click `OK`.
+As with iOS, we're going to create a wrapper class to wrap the JNA binding and ensure that we have a more ergonomic Java API. In the project explorer on the left hand side of the studio window, ensure that `app > java > <domain>.greetings` is highlighted then go to `File > New > Java Class`. Name your class `RustGreetings` and click `OK`.
 
 ![Create new class](assets/2017-09-21-rust-on-android/new-class.png)
 
@@ -175,11 +182,11 @@ We need to load our Rust library when the app starts, so add the following lines
 
 This looks for a library called `greetings.so` inside the jniLibs directory and picks the correct one for the current architecture.
 
-Open `res/layout/activity-greetings.xml`. In the `Component Tree` panel, highlight the `TextField` and open the `Properties` panel. Change the `ID` in the `Properties` panel to `greetingField`. This is how we are going to refer to it from our Activity.
+Open `res/layout/activity-greetings.xml`. In the `Component Tree` panel, highlight the `TextView` and open the `Attributes` panel. Change the `ID` in the `Attributes` panel to `greetingField`. This is how we are going to refer to it from our Activity.
 
 ![Amend activity xml](assets/2017-09-21-rust-on-android/activity-greetings.png)
 
-Reopen `GreetingsActivity.java` and amend the `onCreate` method to call our greetings function and set the text on the `greetingField` `TextField` to the response value.
+Reopen `GreetingsActivity.java` and amend the `onCreate` method to call our greetings function and set the text on the `greetingField` `TextView` to the response value.
 
 ```java
     @Override
@@ -193,6 +200,6 @@ Reopen `GreetingsActivity.java` and amend the `onCreate` method to call our gree
     }
 ```
 
-Build and run the app. If this is your first time in Android Studio, you may need to set up a simulator. When choosing/creating your simulator pick one with API 26. When the app starts, `Hello world` will be printed on your screen.
+Build and run the app. If this is your first time in Android Studio, you may need to set up a simulator. When the app starts, `Hello world` will be printed on your screen.
 
-You can find the code for this on [Github](https://github.com/fluffyemily/cross-platform-rust).
+You can find the code for this on [Github](https://github.com/fluffyemily/cross-platform-rust/tree/master/basic/android/GreetingsJNA).
