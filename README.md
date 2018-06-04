@@ -32,6 +32,7 @@ This is a list of our findings that we're reasonably happy with so far.
 * [IPC Security Models and Status](text/0013-ipc-security-models-and-status.md) is an audit of our current IPC status.
 * [XUL Overlay Removal Review Packet](text/0014-xul-overlay-removal-review-packet.md) is the packet that we prepared for the architectural design review for XUL Overlay removal.
 * [Design Review: Key-Value Storage](text/0015-rkv.md) proposes the introduction of a fast, cross-platform key-value store for Mozilla products.
+* [XULStore Using rkv – Proof of Concept](text/0016-xulstore-rkv-poc.md) describes a proof-of-concept implementation of XULStore that uses [rkv](https://github.com/mozilla/rkv).
 
 ## Posts
 
