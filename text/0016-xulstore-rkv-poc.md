@@ -28,7 +28,7 @@ The PoC then modifies the XULStore XPCOM component to store data in rkv rather t
 
 A rough outline of the component stack (and implementation languages) in the PoC:
 
-![drawing](https://docs.google.com/drawings/d/e/2PACX-1vTeV2q50bm1uDoF-YnTxlawWvJFbPF-gjM0dgqgw5d90rP7Z9f5wIpj31zv9pxqVt9QiSixVAJZNcr9/pub?w=292&h=386)
+![drawing](https://user-images.githubusercontent.com/305455/41000546-2dda9f74-68c3-11e8-8944-f337d2a3d8fb.png)
 
 Only the edges of this stack are essential—in principal, both C++ and JS consumers could call directly into LMDB, avoiding all Rust layers and the XPCOM intermediary—but each layer serves a useful function: the "lmdb" crate wraps LMDB's C interface in safe (albeit low-level) APIs; rkv improves on developer ergonomics and safety with higher-level abstractions; the "xulstore" crate translates the XULStore data model to arbitrary key-value pairs; and the XPCOM component provides idiomatic access for both C++ and JS consumers.
 
@@ -38,7 +38,7 @@ Note that the PoC doesn't rewrite the JS XPCOM component in C++, as that work is
 
 Here's what the stack would look like in a complete implementation (including other consumers of the rkv crate):
 
-![drawing](https://docs.google.com/drawings/d/e/2PACX-1vTe9LCCP6XGn77-_Et1n-LbzVvZXoJiOL4M8fgwv2XgTJOtTxHeCFKSVolcEVl2gSk1ZcUSi3LckGT_/pub?w=572&h=388)
+![drawing](https://user-images.githubusercontent.com/305455/41000554-34795910-68c3-11e8-8959-c54b082a529f.png)
 
 ### Data Model
 
