@@ -33,6 +33,7 @@ This is a list of our findings that we're reasonably happy with so far.
 * [XUL Overlay Removal Review Packet](text/0014-xul-overlay-removal-review-packet.md) is the packet that we prepared for the architectural design review for XUL Overlay removal.
 * [Design Review: Key-Value Storage](text/0015-rkv.md) proposes the introduction of a fast, cross-platform key-value store for Mozilla products.
 * [XULStore Using rkv – Proof of Concept](text/0016-xulstore-rkv-poc.md) describes a proof-of-concept implementation of XULStore that uses [rkv](https://github.com/mozilla/rkv).
+* [LMDB vs. LevelDB](text/0017-lmdb-vs-leveldb.md) compares the [Lightning Memory-mapped Database](https://symas.com/lmdb/) (LMDB) key-value storage engine to the [LevelDB](https://github.com/google/leveldb) key-value storage engine.
 
 ## Posts
 
