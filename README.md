@@ -1,16 +1,10 @@
 
 # Firefox Browser Architecture
 
-## Vision
+## Mission
 
-Build the world’s best web browser
+Change Mozilla. Investigate big technical challenges and produce engineering programs to address them.
 
-## Strategy
-
-Our top priority is to plan for where we want to go, but if we just think 5 years out, we’ll miss the dragon on the doorstep. So we need to look from both angles:
-
-1. Look forward from where we are now: **Move faster**
-2. Look backwards from where we want to get to: **Consciously plan our architecture**
 
 ## Our Conclusions
 
