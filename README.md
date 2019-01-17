@@ -5,27 +5,6 @@
 
 Change Mozilla. Investigate big technical challenges and produce engineering programs to address them.
 
-## 2018 Aspirations
-
-In 2017 we planned **XUL Removal** and began transitioning those programs to engineering. In 2018 we’ll finish the job of removing XUL. Our aspirations are:
-
-* Mozilla will stop thinking about XUL removal and start improving the platform in ways that are blocked by this work.
-* Any essential XUL features that have no web platform equivalent will be exposed to chrome HTML documents.
-* All Firefox feature development will use either HTML or native technologies. There will be only one platform for rendering web-like chrome and content: the Web Platform.
-
-In 2017 we got a mandate to act on **Sync and Storage**. In 2018 we’ll execute on this mandate. Our aspirations are:
-
-* New products and features use centralized sync and storage components for faster development, with fewer features rolling their own.
-* Several existing Firefox components (e.g. Prefs) are updated to converge on a central vision.
-* Core Firefox user data storage gets a facelift to reduce the burden of synchronization and lack of code reuse.
-
-Firefox and mozilla-central are famously monolithic. In 2018 we’ll popularize **modular source code** structures and development workflows in our Firefox applications. Our aspirations are:
-
-* Isolated units with intentional boundaries, where each unit has a tight internal development cycle, becomes the most common way to implement Firefox features.
-* GitHub-based development of Firefox features is supported, simple, and sublime.
-* Developers use appropriate amounts of Rust in the development of Firefox features.
-* New Firefox applications reuse existing Firefox components.
-
 
 ## Our Conclusions
 
