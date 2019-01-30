@@ -219,7 +219,7 @@ LevelDB compresses data on disk using <a href="https://github.com/google/snappy"
 
 [Is LMDB a LevelDB Killer?](https://symas.com/is-lmdb-a-leveldb-killer/)
 
-[Understanding LMDB Database File Sizes and Memory Utilization](https://docs.google.com/document/d/167qDPvx60GTNF8XqLtFv8FTNYvpcYQ_Wb9kqO-MKnaI/) (The link is to a Google Docs copy of the [Google cache of the article](https://webcache.googleusercontent.com/search?q=cache:MBZhGNmOXTkJ:https://symas.com/understanding-lmdb-database-file-sizes-and-memory-utilization/+&cd=1&hl=en&ct=clnk&gl=us&client=firefox-b-1-ab), as the article content is currently hidden in the [original page](https://symas.com/understanding-lmdb-database-file-sizes-and-memory-utilization/).)
+[Understanding LMDB Database File Sizes and Memory Utilization](https://symas.com/understanding-lmdb-database-file-sizes-and-memory-utilization/)
 
 [LevelDB "impl" document](https://github.com/google/leveldb/blob/master/doc/impl.md)
 
