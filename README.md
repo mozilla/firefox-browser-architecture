@@ -45,3 +45,14 @@ To support our conclusions we occasionally perform explorations and experiments.
 
 * [Deploying a Rust library on iOS](experiments/2017-09-06-rust-on-ios.md). A short tutorial describing how to build and deploy a Rust library for use inside an iOS app.
 * [Deploying a Rust library on Android](experiments/2017-09-21-rust-on-android.md). A short tutorial describing how to build and deploy a Rust library for use inside an Android app.
+
+<!-- This is a copy of this text in CODE_OF_CONDUCT.md -->
+
+# Community Participation Guidelines
+
+This repository is governed by Mozilla's code of conduct and etiquette guidelines. 
+For more details, please read the
+[Mozilla Community Participation Guidelines](https://www.mozilla.org/about/governance/policies/participation/). 
+
+## How to Report
+For more information on how to report violations of the Community Participation Guidelines, please read our '[How to Report](https://www.mozilla.org/about/governance/policies/participation/reporting/)' page.
